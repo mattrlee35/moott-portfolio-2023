@@ -9,8 +9,28 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+          'oswald' : ['Oswald', 'sans-serif']
+      },
+      fontFamily: {
+        'bebas' : ['Bebas Neue', 'sans-serif']
+    },
+    },
   },
   plugins: [],
 }
+
+// how to import custom font
+
+// import from fonts.google.com into main.css
+// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+// add to tailwind.config.js
+// fontFamily: {
+//   'oswald' : ['Oswald', 'sans-serif']
+// },
+
+// add font-"font" to .vue file
+// font-oswald
 
