@@ -1,3 +1,4 @@
+<!-- TODO: SETUP PROJECTS PAGE -->
 <template>
     <div>
       <h1>Projects</h1>

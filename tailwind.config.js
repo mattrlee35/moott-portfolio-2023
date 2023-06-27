@@ -10,12 +10,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-          'oswald' : ['Oswald', 'sans-serif']
+      fontFamily: 
+      {
+        'oswald' : ['Oswald', 'sans-serif']
       },
-      fontFamily: {
+      fontFamily: 
+      {
         'bebas' : ['Bebas Neue', 'sans-serif']
-    },
+      },
     },
   },
   plugins: [],

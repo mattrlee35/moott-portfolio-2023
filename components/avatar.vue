@@ -1,4 +1,4 @@
 <template>
     <!-- TODO: CHANGE AVATAR -->
-    <img class="inline-block h-80 w-70 rounded-md" src="https://i.imgur.com/tl9akH4.jpg" alt="" />
+    <img class="inline-block h-60 w-60 border-4 border-blue-100 border-solid rounded-full" src="https://i.imgur.com/1z5i44F.png" alt="" />
 </template>
