@@ -18,6 +18,10 @@ module.exports = {
       {
         'bebas' : ['Bebas Neue', 'sans-serif']
       },
+      screens : {
+        'sm': '600px',
+        'lg': '1150px',
+      },
     },
   },
   plugins: [],

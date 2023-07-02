@@ -1,6 +1,6 @@
 
 <template>
-    <ol class="items-center sm:flex">
+    <ol class="items-center lg:flex justify-center">
         <li class="relative mb-6 sm:mb-0">
             <div class="flex items-center">
                 <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">

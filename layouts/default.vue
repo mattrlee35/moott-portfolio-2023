@@ -11,7 +11,7 @@
               <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
             </DisclosureButton>
           </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
             <!-- TODO: CHANGE LOGO -->
             <div class="flex flex-shrink-0 items-center">
               <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
