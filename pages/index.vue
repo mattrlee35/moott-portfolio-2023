@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="mt-20 mx-auto items-center">
-        <div class="text-6xl font-bebas">
+        <div class="text-6xl font-oswald">
           Matthew Lee
         </div>
       </div>

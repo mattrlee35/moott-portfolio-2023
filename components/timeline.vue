@@ -9,9 +9,9 @@
                 <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
             </div>
             <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.0.0</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2, 2021</time>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                <h3 class="text-lg font-oswald text-gray-900 dark:text-black">Southern New Hampshire University</h3>
+                <p class="text-base font-oswald text-gray-500 dark:text-gray-400">B.S. in Computer Science</p>
+                <time class="block mb-2 text-sm font-oswald leading-none text-gray-400 dark:text-gray-500">Graduated November 2020</time>
             </div>
         </li>
     <li class="relative mb-6 sm:mb-0">
@@ -22,9 +22,9 @@
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3 sm:pr-8">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.2.0</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 23, 2021</time>
-            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+            <h3 class="text-lg font-oswald text-gray-900 dark:text-black">IT Support Specialist</h3>
+            <p class="text-base font-oswald text-gray-500 dark:text-gray-400">Vector Fields Inc</p>
+            <time class="block mb-2 text-sm font-oswald leading-none text-gray-400 dark:text-gray-500">Worked May 2020 - September 2020</time>
         </div>
     </li>
     <li class="relative mb-6 sm:mb-0">
@@ -35,9 +35,9 @@
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3 sm:pr-8">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.3.0</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 5, 2022</time>
-            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+            <h3 class="text-lg font-oswald text-gray-900 dark:text-black">Geek Squad Agent</h3>
+            <p class="text-base font-oswald text-gray-500 dark:text-gray-400">Best Buy</p>
+            <time class="block text-sm mb-2 font-oswald leading-none text-gray-400 dark:text-gray-500">Worked September 2020 - December 2022</time>      
         </div>
     </li>
 </ol>
