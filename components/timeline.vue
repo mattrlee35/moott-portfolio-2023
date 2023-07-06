@@ -1,5 +1,8 @@
 
 <template>
+    <p class="text-6xl text-slate-300 font-oswald text-center mb-10">
+        Experience
+    </p>
     <ol class="items-center lg:flex justify-center">
         <li class="relative mb-6 sm:mb-0">
             <div class="flex items-center">
@@ -9,7 +12,7 @@
                 <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
             </div>
             <div class="mt-3 sm:pr-8">
-                <h3 class="text-lg font-oswald text-gray-900 dark:text-black">Southern New Hampshire University</h3>
+                <h3 class="text-lg font-oswald text-white dark:text-white">Southern New Hampshire University</h3>
                 <p class="text-base font-oswald text-gray-500 dark:text-gray-400">B.S. in Computer Science</p>
                 <time class="block mb-2 text-sm font-oswald leading-none text-gray-400 dark:text-gray-500">Graduated November 2020</time>
             </div>
@@ -22,7 +25,7 @@
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3 sm:pr-8">
-            <h3 class="text-lg font-oswald text-gray-900 dark:text-black">IT Support Specialist</h3>
+            <h3 class="text-lg font-oswald text-white dark:text-white">IT Support Specialist</h3>
             <p class="text-base font-oswald text-gray-500 dark:text-gray-400">Vector Fields Inc</p>
             <time class="block mb-2 text-sm font-oswald leading-none text-gray-400 dark:text-gray-500">Worked May 2020 - September 2020</time>
         </div>
@@ -35,7 +38,7 @@
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3 sm:pr-8">
-            <h3 class="text-lg font-oswald text-gray-900 dark:text-black">Geek Squad Agent</h3>
+            <h3 class="text-lg font-oswald text-white dark:text-white">Geek Squad Agent</h3>
             <p class="text-base font-oswald text-gray-500 dark:text-gray-400">Best Buy</p>
             <time class="block text-sm mb-2 font-oswald leading-none text-gray-400 dark:text-gray-500">Worked September 2020 - December 2022</time>      
         </div>
