@@ -12,11 +12,6 @@
             </DisclosureButton>
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
-            <!-- TODO: CHANGE LOGO -->
-            <div class="flex flex-shrink-0 items-center">
-              <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-              <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-            </div>
             <div class="hidden sm:ml-6 sm:flex sm:space-x-8"> 
                 
             <NuxtLink class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-300 hover:border-gray-300 hover:text-gray-700 focus:border-indigo-500 focus:text-gray-900" to="/">Home</NuxtLink>

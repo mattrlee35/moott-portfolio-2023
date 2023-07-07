@@ -19,46 +19,46 @@
           Skills
           </p>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsJavaScript/>
+            <AboutmeSkillsJavaScript/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsJava/>
+            <AboutmeSkillsJava/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsC++/>
+            <AboutmeSkillsC++/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsPython/>
+            <AboutmeSkillsPython/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsHtml5/>
+            <AboutmeSkillsHtml5/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsNuxt/>
+            <AboutmeSkillsNuxt/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsTailwind/>
+            <AboutmeSkillsTailwind/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsGithub/>
+            <AboutmeSkillsGithub/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsAws/>
+            <AboutmeSkillsAws/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsCss3/>
+            <AboutmeSkillsCss3/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsDjango/>
+            <AboutmeSkillsDjango/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsMongodb/>
+            <AboutmeSkillsMongodb/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsRaspberrypi/>
+            <AboutmeSkillsRaspberrypi/>
           </div>
           <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
-            <SkillsPhp/>
+            <AboutmeSkillsPhp/>
           </div>
         </div>
         </div>

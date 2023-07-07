@@ -16,13 +16,13 @@
       <div class="mt-20 mx-auto items-center">
         <div class="grid grid-flow-col auto-col-max place-items-center mb-5 sm:mb-5">
           <div class="col-start-1">
-            <linkedin/>
+            <SocialsLinkedin/>
           </div>
           <div class="col-start-2 mx-10">
-            <github/>
+            <SocialsGithub/>
           </div>
           <div class="col-start-3">
-            <email/>
+            <SocialsEmail/>
           </div>
         </div>
       </div>
