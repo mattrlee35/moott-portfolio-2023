@@ -3,17 +3,17 @@
   <div>
     <div class="flex min-h-screen items-center justify-center p-4 pt-20 sm:p-20">
       <div class="container grid gap-8 max-w-5xl grid-cols-1">
-        <div class="flex bg-slate-800 p-4 rounded-md shadow-md text-center">
+        <div class="flex bg-slate-800 p-4 rounded-md shadow-md text-center border-4 border-slate-300">
           <div class="p-10 text-slate-300">
             <aboutMe />
           </div>
         </div>
-        <div class="flex bg-slate-800 p-4 rounded-md shadow-md items-center">
+        <div class="flex bg-slate-800 p-4 rounded-md shadow-md items-center border-4 border-slate-300">
           <div class="flex-1 p-10">
             <timeline />
           </div>
         </div>
-        <div class="flex  bg-slate-800 p-4 rounded-md shadow-md item-center justify-center">
+        <div class="flex  bg-slate-800 p-4 rounded-md shadow-md item-center justify-center border-4 border-slate-300">
         <div class="grid grid-cols-4 grid-rows-5 place-items-center gap-7 my-5 sm:my-5 md:grid-cols-7 md:grid-rows-3">
           <p class=" col-span-4 md:col-span-7 text-6xl text-slate-300 font-oswald text-center">
           Skills

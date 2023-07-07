@@ -1,6 +1,6 @@
 <template>
     <!-- TODO: CHANGE BUTTONS TO HOW WE WANT THEM -->
-    <button type="button" class="inline-flex items-center gap-x-2 rounded-md bg-slate-800 px-3.5 py-2.5 text-sm font-oswald text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+    <button type="button" class="inline-flex items-center gap-x-2 rounded-md bg-slate-800 px-3.5 py-2.5 text-sm font-oswald text-slate-300 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-4 border-slate-300">
         <svg class="h-5 w-5 text-white"  
             viewBox="0 0 24 24"  
             fill="none"  
