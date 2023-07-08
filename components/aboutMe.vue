@@ -1,7 +1,4 @@
-<template>
-    <p class="text-6xl font-oswald text-center mb-10">
-        About Me
-    </p>          
+<template>        
     <p class="font-oswald">
         <p class="font-oswald mb-5">
             Currently, I am senior majoring in Computer Science with a concentration in Software Engineering at Southern New Hampshire University. I grew up in Aurora, Illinois and graduated from West Aurora High School in May 2010. 

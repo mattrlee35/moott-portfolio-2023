@@ -1,8 +1,5 @@
 
 <template>
-    <p class="text-6xl text-slate-300 font-oswald text-center mb-10">
-        Experience
-    </p>
     <ol class="items-center lg:flex justify-center">
         <li class="relative mb-6 sm:mb-0">
             <div class="flex items-center">

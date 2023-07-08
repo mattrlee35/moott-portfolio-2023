@@ -29,6 +29,9 @@ module.exports = {
         'sm': '600px',
         'lg': '1150px',
       },
+      colors: {
+        'aquagreen': '#234E52',
+      },
     },
   },
   plugins: [

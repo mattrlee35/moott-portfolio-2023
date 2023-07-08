@@ -14,51 +14,51 @@
           </div>
         </div>
         <div class="flex  bg-slate-800 p-4 rounded-md shadow-md item-center justify-center border-4 border-slate-300">
-        <div class="grid grid-cols-4 grid-rows-5 place-items-center gap-7 my-5 sm:my-5 md:grid-cols-7 md:grid-rows-3">
-          <p class=" col-span-4 md:col-span-7 text-6xl text-slate-300 font-oswald text-center">
-          Skills
-          </p>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+        <div class="grid grid-cols-4 grid-rows-4 place-items-center gap-7 my-5 sm:my-5 md:grid-cols-7 md:grid-rows-2">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsJavaScript/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsJava/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsC++/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsPython/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsHtml5/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsNuxt/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsTailwind/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsGithub/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsAws/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsCss3/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsDjango/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsMongodb/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsRaspberrypi/>
           </div>
-          <div class="mx-auto items-center bg-slate-300 rounded-lg shadow-2xl p-1">
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
             <AboutmeSkillsPhp/>
+          </div>
+          <div class="mx-auto items-center bg-slate-400 rounded-lg shadow-2xl p-1">
+            <AboutmeSkillsKotlin/>
           </div>
         </div>
         </div>
