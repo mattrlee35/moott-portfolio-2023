@@ -19,11 +19,11 @@ module.exports = {
       },
       fontFamily: 
       {
-        'oswald' : ['Oswald', 'sans-serif']
-      },
-      fontFamily: 
-      {
-        'bebas' : ['Bebas Neue', 'sans-serif']
+        'oswald' : ['Oswald', 'sans-serif'],
+        'bebas' : ['Bebas Neue', 'sans-serif'],
+        'nunito' : ['Nunito Sans', 'sans-serif'],
+        'monoton' : ['Monoton', 'cursive'],
+        'rokkitt': ['Rokkitt', 'serif'],
       },
       screens : {
         'sm': '600px',
@@ -31,6 +31,16 @@ module.exports = {
       },
       colors: {
         'aquagreen': '#234E52',
+        'aquamarine' : '#38B2AC',
+        'golden' : "#DAA21C",
+        'darkerblue' : "#111D2E",
+        'lighterblue' : "#0094FA",
+        'offwhite': "#F1FAFF",
+        'cream' : "#FFF7D6",
+        'momblue' : '#636E83',
+        'momblue2' : '#3D485C',
+        'cobalt' : '#0047AB',
+        'cornflower' : '#1D4E73',
       },
     },
   },

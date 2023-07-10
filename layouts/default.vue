@@ -1,6 +1,5 @@
 <template>
-  <!-- TODO: CENTER NAVBAR -->
-  <Disclosure as="nav" class="bg-slate-800 shadow sticky top-0" v-slot="{ open }">
+  <Disclosure as="nav" class="z-20 bg-cornflower border-b-4 border-golden sticky top-0 z-10" v-slot="{ open }">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -12,11 +11,11 @@
             </DisclosureButton>
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
-            <div class="hidden sm:ml-6 sm:flex sm:space-x-8"> 
-                
-            <NuxtLink class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-300 hover:border-gray-300 hover:text-gray-700 focus:border-indigo-500 focus:text-gray-900" to="/">Home</NuxtLink>
-            <NuxtLink class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-300 hover:border-gray-300 hover:text-gray-700 focus:border-indigo-500 focus:text-gray-900" to="/about">About Me</NuxtLink>
-            <NuxtLink class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-300 hover:border-gray-300 hover:text-gray-700 focus:border-indigo-500 focus:text-gray-900" to="/projects">Projects</NuxtLink>
+            <div class="hidden sm:px-6 sm:flex"> 
+               <!--TODO: CHANGE NAV BAR HOVER COLOR + NAV BAR FOCUS COLOR  -->
+            <NuxtLink class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-md font-medium text-offwhite hover:border-golden hover:text-golden focus:bg-darkerblue focus:border-golden focus:text-golden" to="/">Home</NuxtLink>
+            <NuxtLink class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-md font-medium text-offwhite hover:border-golden hover:text-golden focus:bg-darkerblue focus:border-golden focus:text-golden" to="/about">About Me</NuxtLink>
+            <NuxtLink class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-md font-medium text-offwhite hover:border-golden hover:text-golden focus:bg-darkerblue focus:border-golden focus:text-golden" to="/projects">Projects</NuxtLink>
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
