@@ -16,51 +16,81 @@
         <!-- TODO: CHANGE ICONS / LOOK FOR NEW ICONS -->
         <div class="flex  bg-cornflower p-4 rounded-md shadow-md item-center justify-center border-4 border-golden">
         <div class="grid grid-cols-4 grid-rows-4 place-items-center gap-7 my-5 sm:my-5 md:grid-cols-7 md:grid-rows-2">
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+          <NuxtLink to="https://www.javascript.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsJavaScript/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+          </NuxtLink>
+        <NuxtLink to="https://www.java.com/en/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsJava/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://cplusplus.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsC++/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://www.python.org/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsPython/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://html.com/html5/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsHtml5/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://nuxt.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsNuxt/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://tailwindcss.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsTailwind/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://github.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsGithub/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://aws.amazon.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsAws/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://www.css3.info/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsCss3/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://www.djangoproject.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsDjango/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://www.mongodb.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsMongodb/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://www.raspberrypi.com/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsRaspberrypi/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://www.php.net/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsPhp/>
           </div>
-          <div class="mx-auto items-center bg-offwhite rounded-lg shadow-lg p-1">
+        </NuxtLink>
+        <NuxtLink to="https://kotlinlang.org/" target="_blank">
+          <div class="p-1">
             <AboutmeSkillsKotlin/>
           </div>
+        </NuxtLink>
         </div>
         </div>
       </div>

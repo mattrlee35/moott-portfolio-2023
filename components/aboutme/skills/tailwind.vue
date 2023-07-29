@@ -1,3 +1,3 @@
 <template>
-    <img class="inline-block h-24 w-24 " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt=""/>  
+    <img class="w-full h-full object-cover bg-darkerblue rounded-full border-4 border-golden hover:border-offwhite" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tailwindcss/tailwindcss-plain.svg">  
 </template>

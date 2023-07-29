@@ -41,6 +41,7 @@ module.exports = {
         'momblue2' : '#3D485C',
         'cobalt' : '#0047AB',
         'cornflower' : '#1D4E73',
+        'lightyellow' : '#F0DB4F',
       },
     },
   },
