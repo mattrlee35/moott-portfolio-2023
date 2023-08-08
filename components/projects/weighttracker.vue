@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-md py-4 px-8 bg-cornflower  shadow-lg rounded-lg  border-golden">
+    <div class="max-w-md py-4 px-8 bg-cornflower  shadow-lg rounded-lg border-4 border-golden">
         <div class="flex justify-center md:justify-end -mt-10">
             <img class="object-scale-down w-12 h-12 bg-darkerblue rounded-full border-2 border-golden" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/kotlin/kotlin-original.svg">
         </div>
