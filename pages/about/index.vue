@@ -2,8 +2,8 @@
   <div>
     <div class="flex min-h-screen items-center justify-center p-4 pt-20 sm:p-20">
       <div class="container grid gap-8 max-w-5xl grid-cols-1">
-        <!-- TODO: REREAD ALL THE TEXT AND MAYBE REWRITE IT? -->
         <div class="flex bg-cornflower p-4 rounded-md shadow-md border-4 border-golden">
+          <!-- TODO: UPDATE ABOUTME PAGES WITH TITLES -->
           <div class="p-7 text-lg text-offwhite">
             <aboutMe />
           </div>

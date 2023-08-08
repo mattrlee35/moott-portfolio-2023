@@ -1,6 +1,7 @@
 <template>        
     <p class="">
-        <h1 class="text-5xl text-bold mb-5 text-center">Welcome to my About Me!</h1>
+        <h1 class="text-5xl font-bold text-center">Welcome to my About Me!</h1>
+        <div class="my-5 sm:my-5 hidden sm:flex w-full bg-golden h-0.5 dark:bg-golden"></div>
         <p class=" mb-5">
             I grew up in Aurora, Illinois and graduated from West Aurora High School in May 2010. 
             To continue my education, I enrolled at Waubonsee Community College in the Fall of 2010 to pursue my associate degree in Mathematics. I was forced to take a step back from completing my degree to take care of my parents, which allowed me the opportunity to think about the career path I wanted to pursue. 
