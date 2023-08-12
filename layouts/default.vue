@@ -17,10 +17,10 @@
             </DisclosureButton>
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
-            <div class="hidden sm:px-6 sm:flex"> 
-            <NuxtLink class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-2xl font-medium text-offwhite hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/') }" to="/">Home</NuxtLink>
-            <NuxtLink to="/about" class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-2xl font-medium text-offwhite hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/about') }">About Me</NuxtLink>
-            <NuxtLink to="/projects" class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-2xl font-medium text-offwhite hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/projects') }">Projects</NuxtLink>
+            <div class="hidden sm:px-6 sm:flex text-offwhite "> 
+            <NuxtLink class="inline-flex items-center px-5 pt-1 text-2xl font-medium hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/') }" to="/">Home</NuxtLink>
+            <NuxtLink to="/about" class="inline-flex items-center px-5 pt-1 text-2xl font-medium hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/about') }">About Me</NuxtLink>
+            <NuxtLink to="/projects" class="inline-flex items-center px-5 pt-1 text-2xl font-medium hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/projects') }">Projects</NuxtLink>
             </div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
