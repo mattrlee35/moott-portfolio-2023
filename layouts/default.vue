@@ -28,7 +28,6 @@
         </div>
       </div>
       <DisclosurePanel class="sm:hidden">
-        <!-- TODO: update to nuxtlink + colors -->
         <div class="space-y-1 pb-4 pt-2 text-offwhite">
           <NuxtLink to="/" class="block border-transparent py-2 pl-3 pr-4 text-2xl font-medium hover:border-golden hover:bg-darkerblue hover:text-golden hover:border-l-4" :class="{ 'text-golden bg-darkerblue border-l-4': isActive('/') }">Home</NuxtLink>
           <NuxtLink to="/about" class="block border-transparent py-2 pl-3 pr-4 text-2xl font-medium hover:border-golden hover:bg-darkerblue hover:text-golden hover:border-l-4" :class="{ 'text-golden bg-darkerblue border-l-4': isActive('/about') }">About Me</NuxtLink>

@@ -10,7 +10,7 @@
           </div>
           <div class="text-center mt-20">
               <h3 class="text-5xl  text-offwhite font-bold leading-normal mb-1">Matthew Lee</h3>
-              <div class="text-sm mt-0 mb-2 text-offwhite uppercase">
+              <div class="text-md mt-0 mb-2 text-offwhite uppercase">
                   <i class="fas fa-map-marker-alt mr-2 text-offwhite opacity-75"></i>Aurora, Illinois
               </div>
           </div>
