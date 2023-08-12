@@ -1,6 +1,4 @@
 <template>
-  <!-- TODO: Style -->
-  <Transition appear>
     <div>     
       <div class="flex min-h-screen flex-col items-center p-4 pt-20 pb-20 sm:p-20">
         <div class="max-w-5xl break-words bg-cornflower w-full mb-6 shadow-md rounded-md border-4 border-golden">
@@ -38,7 +36,6 @@
         </div>  
       </div>
     </div>
-  </Transition>
 </template>
 
 <script setup>

@@ -1,3 +1,3 @@
 <template>
-    <img class="w-24 h-24 object-cover bg-lightyellow " src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg">
+    <img class="w-28 h-28 rounded-full bg-darkerblue border-2 border-golden" src="https://www.freepnglogos.com/uploads/javascript/javascript-online-logo-for-website-0.png">
 </template>

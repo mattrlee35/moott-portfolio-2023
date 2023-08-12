@@ -1,6 +1,6 @@
 <template>        
     <p class="">
-        <h1 class="text-5xl font-bold text-center">Welcome to my About Me!</h1>
+        <h1 class="text-5xl font-bold text-center">Welcome!</h1>
         <div class="my-5 sm:my-5 hidden sm:flex w-full bg-golden h-0.5 dark:bg-golden"></div>
         <p class=" mb-5">
             I grew up in Aurora, Illinois and graduated from West Aurora High School in May 2010. 
