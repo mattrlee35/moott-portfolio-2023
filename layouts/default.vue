@@ -18,7 +18,7 @@
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
             <div class="hidden sm:px-6 sm:flex text-offwhite "> 
-            <NuxtLink class="inline-flex items-center px-5 pt-1 text-2xl font-medium hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/') }" to="/">Home</NuxtLink>
+            <NuxtLink to="/" class="inline-flex items-center px-5 pt-1 text-2xl font-medium hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/') }">Home</NuxtLink>
             <NuxtLink to="/about" class="inline-flex items-center px-5 pt-1 text-2xl font-medium hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/about') }">About Me</NuxtLink>
             <NuxtLink to="/projects" class="inline-flex items-center px-5 pt-1 text-2xl font-medium hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" :class="{ 'text-golden bg-darkerblue': isActive('/projects') }">Projects</NuxtLink>
             </div>
@@ -28,10 +28,11 @@
         </div>
       </div>
       <DisclosurePanel class="sm:hidden">
-        <div class="space-y-1 pb-4 pt-2">
-          <DisclosureButton as="a" href="/" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Home</DisclosureButton>
-          <DisclosureButton as="a" href="/about" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">About Me</DisclosureButton>
-          <DisclosureButton as="a" href="/projects" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Projects</DisclosureButton>
+        <!-- TODO: update to nuxtlink + colors -->
+        <div class="space-y-1 pb-4 pt-2 text-offwhite">
+          <NuxtLink to="/" class="block border-transparent py-2 pl-3 pr-4 text-2xl font-medium hover:border-golden hover:bg-darkerblue hover:text-golden hover:border-l-4" :class="{ 'text-golden bg-darkerblue border-l-4': isActive('/') }">Home</NuxtLink>
+          <NuxtLink to="/about" class="block border-transparent py-2 pl-3 pr-4 text-2xl font-medium hover:border-golden hover:bg-darkerblue hover:text-golden hover:border-l-4" :class="{ 'text-golden bg-darkerblue border-l-4': isActive('/about') }">About Me</NuxtLink>
+          <NuxtLink to="/projects" class="block border-transparent py-2 pl-3 pr-4 text-2xl font-medium hover:border-golden hover:bg-darkerblue hover:text-golden hover:border-l-4" :class="{ 'text-golden bg-darkerblue border-l-4' : isActive('/projects') }">Projects</NuxtLink>
         </div>
       </DisclosurePanel>
   </Disclosure>
@@ -41,7 +42,7 @@
 </template> 
 
 <script setup>
-    import { useRoute } from 'vue-router';
+    import { useRoute, useRouter } from 'vue-router';
     import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
     import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
@@ -49,6 +50,26 @@
     const isActive = (route) => {
       const $route = useRoute();
       return $route.path === route;
+    };
+
+    // Define the beforeRouteEnter navigation guard
+    const beforeRouteEnter = (to, from, next) => {
+      if (!to.hash) {
+        // Scroll to top of the page on route change
+        window.scrollTo(0, 0);
+
+        // Set the active tab to "Home" on initial render
+        // You can modify this logic if you're using named routes
+        // For example, if your named route for Home is "home"
+        if (to.path === '/') {
+          // Activate the "Home" tab
+          next((vm) => {
+            vm.isActive = isActive('/');
+          });
+        }
+      }
+
+      next();
     };
     </script>
 
