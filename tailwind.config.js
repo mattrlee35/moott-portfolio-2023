@@ -27,6 +27,10 @@ module.exports = {
       },
       screens : {
         'sm': '600px',
+        'md-custom': '760px',
+        'md': '900px',
+        'lg-custom-projects': '1000px',
+        'lg-custom': '1040px',
         'lg': '1150px',
       },
       colors: {

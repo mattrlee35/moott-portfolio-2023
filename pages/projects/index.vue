@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div class="flex min-h-screen items-start justify-center p-4 pt-20 sm:p-20">
-      <div class="container grid grid-cols-4 grid-rows-2 gap-8 md:grid-cols-4 max-w-5xl">
-          <div class="col-span-2">
+    <div class="flex min-h-screen items-center lg-custom-projects:items-start justify-center p-4 pt-20 sm:p-20">
+      <div class="flex grid grid-cols-1 gap-8 lg-custom-projects:grid-cols-4 max-w-5xl">
+          <div class="lg-custom-projects:col-span-2">
             <ProjectsPortfolio2023 />
           </div>
-          <div class="ml-12 col-span-2">
+          <div class="lg-custom-projects:ml-12 lg-custom-projects:col-span-2">
             <ProjectsDiscordbot />
           </div>
-          <div class="col-span-2">
+          <div class="lg-custom-projects:col-span-2">
             <ProjectsEportfolio />
           </div>
-          <div class="ml-12 col-span-2">
+          <div class="lg-custom-projects:ml-12 lg-custom-projects:col-span-2">
             <ProjectsWeighttracker />
           </div>
       </div>

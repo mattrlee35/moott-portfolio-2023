@@ -1,12 +1,12 @@
 <template>
-    <div class="max-w-md py-4 px-8 bg-cornflower  shadow-lg rounded-lg border-4 border-golden">
-        <div class="flex justify-center md:justify-end -mt-10">
+    <div class="max-w-md py-4 px-4 bg-cornflower  shadow-lg rounded-lg border-4 border-golden">
+        <div class="flex justify-end -mt-10">
             <img class="w-12 h-12 object-cover bg-darkerblue rounded-full border-2 border-golden" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/nuxtjs/nuxtjs-original.svg">
             <img class="w-12 h-12 object-cover bg-darkerblue rounded-full border-2 border-golden" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tailwindcss/tailwindcss-plain.svg">
         </div>
         <div>
             <h2 class="text-offwhite text-3xl font-semibold">Portfolio 2023</h2>
-            <p class="mt-2 text-offwhite">This project is an updated portfolio website that displays all of my previous work and showcases information about me.</p>
+            <p class="mt-2 text-offwhite">This project serves as a refreshed portfolio website, highlighting my past projects and providing insights about me.</p>
         </div>
         <div class="flex justify-end mt-4">
             <NuxtLink to="https://github.com/mattrlee35/moott-portfolio-2023" target="_blank">
