@@ -3,7 +3,6 @@
     <div class="flex min-h-screen items-center justify-center p-4 pt-20 sm:p-20">
       <div class="container grid gap-8 max-w-5xl grid-cols-1">
         <div class="flex bg-cornflower p-4 rounded-md shadow-md border-4 border-golden">
-          <!-- TODO: UPDATE ABOUTME PAGES WITH TITLES -->
           <div class="p-7 text-lg text-offwhite">
             <aboutMe />
           </div>
@@ -13,7 +12,6 @@
             <timeline />
           </div>
         </div>
-        <!-- TODO: CHANGE ICONS / LOOK FOR NEW ICONS -->
         <div class="bg-cornflower rounded-md shadow-md justify-center border-4 border-golden">
         <div class="px-11">
         <h1 class="pt-11 text-5xl text-offwhite font-bold text-center col-span-7">Skills</h1>
