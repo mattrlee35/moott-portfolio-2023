@@ -22,81 +22,51 @@
         <div class="grid grid-cols-3 grid-rows-10 place-items-center px-11 pb-11 pt-5 md-custom:grid-cols-4 md-custom:grid-rows-4 md:grid-cols-5 md:grid-rows-3 lg-custom:grid-cols-6 lg-custom:grid-rows-3">
         <!-- <h1 class="mt-5 text-5xl text-offwhite font-bold text-center col-span-7">Skills</h1>
         <div class="hidden -mt-5 sm:flex w-full col-span-7 bg-golden h-0.5 dark:bg-golden"></div> -->
-          <NuxtLink to="https://www.javascript.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsJavaScript/>
           </div>
-          </NuxtLink>
-        <NuxtLink to="https://www.java.com/en/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsJava/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://cplusplus.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsC++/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://www.python.org/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsPython/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://html.com/html5/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsHtml5/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://nuxt.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsNuxt/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://tailwindcss.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsTailwind/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://github.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsGithub/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://aws.amazon.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsAws/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://www.css3.info/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsCss3/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://www.djangoproject.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsDjango/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://www.mongodb.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsMongodb/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://www.raspberrypi.com/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsRaspberrypi/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://www.php.net/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsPhp/>
           </div>
-        </NuxtLink>
-        <NuxtLink to="https://kotlinlang.org/" target="_blank">
           <div class="p-1">
             <AboutmeSkillsKotlin/>
           </div>
-        </NuxtLink>
         </div>
         </div>
         </div>
