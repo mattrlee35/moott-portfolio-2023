@@ -4,6 +4,8 @@ This project serves as a refreshed portfolio website, highlighting my past proje
 
 https://matthew-lee.vercel.app/
 
+![Screenshot 2023-08-13 215301](https://github.com/mattrlee35/moott-portfolio-2023/assets/137587427/3e8059ff-8751-49bc-b649-1dd4c919e6c1)
+
 ## Setup
 
 Make sure to install the dependencies:
