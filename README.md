@@ -4,8 +4,6 @@ This project serves as a refreshed portfolio website, highlighting my past proje
 
 https://matthew-lee.vercel.app/
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
 ## Setup
 
 Make sure to install the dependencies:
