@@ -1,4 +1,8 @@
-# Nuxt 3 Minimal Starter
+# Matthew Lee Portfolio 2023
+
+This project serves as a refreshed portfolio website, highlighting my past projects and providing insights about me.
+
+https://matthew-lee.vercel.app/
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 

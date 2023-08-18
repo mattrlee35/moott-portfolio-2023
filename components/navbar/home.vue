@@ -31,7 +31,6 @@
         </div>
         <DisclosurePanel class="sm:hidden">
           <div class="space-y-1 pb-4 pt-2">
-            <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-slate-300 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
             <DisclosureButton as="a" href="/" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Home</DisclosureButton>
             <DisclosureButton as="a" href="/about" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">About Me</DisclosureButton>
             <DisclosureButton as="a" href="/projects" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Projects</DisclosureButton>

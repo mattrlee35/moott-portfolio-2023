@@ -14,7 +14,6 @@
                   <i class="fas fa-map-marker-alt mr-2 text-offwhite opacity-75"></i>Aurora, Illinois
               </div>
           </div>
-          <!-- TODO: CHANGE LAYOUT OF BUTTONS -->
           <div class="mt-6 border-t border-slate-200 text-center">
               <div class="flex flex-wrap justify-center">
                 <div class="mt-5 mx-auto p-4 items-center w-full max-w-2xl">

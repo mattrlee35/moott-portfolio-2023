@@ -18,8 +18,6 @@
         <div class="mt-5 flex w-full bg-golden h-0.5 dark:bg-golden"></div>
         </div>
         <div class="grid grid-cols-3 grid-rows-10 place-items-center px-11 pb-11 pt-5 md-custom:grid-cols-4 md-custom:grid-rows-4 md:grid-cols-5 md:grid-rows-3 lg-custom:grid-cols-6 lg-custom:grid-rows-3">
-        <!-- <h1 class="mt-5 text-5xl text-offwhite font-bold text-center col-span-7">Skills</h1>
-        <div class="hidden -mt-5 sm:flex w-full col-span-7 bg-golden h-0.5 dark:bg-golden"></div> -->
           <div class="p-1">
             <AboutmeSkillsJavaScript/>
           </div>
@@ -67,7 +65,7 @@
           </div>
         </div>
         </div>
-        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -25,6 +25,7 @@ module.exports = {
         'monoton' : ['Monoton', 'cursive'],
         'rokkitt': ['Rokkitt', 'serif'],
       },
+      // different screen sizes
       screens : {
         'sm': '600px',
         'md-custom': '760px',
@@ -59,17 +60,3 @@ module.exports = {
     }),
   ],
 }
-
-// how to import custom font
-
-// import from fonts.google.com into main.css
-// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-
-// add to tailwind.config.js
-// fontFamily: {
-//   'oswald' : ['Oswald', 'sans-serif']
-// },
-
-// add font-"font" to .vue file
-// font-oswald
-
