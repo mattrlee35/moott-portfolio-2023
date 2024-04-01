@@ -9,9 +9,9 @@
                 <div class="flex w-full bg-golden h-0.5 dark:bg-golden"></div>
             </div>
             <div class="mt-3 sm:pr-8">
-                <h3 class="text-xl  text-offwhite dark:text-offwhite">Geek Squad Agent</h3>
-                <p class="text-base  text-md text-offwhite dark:text-slate-300">Best Buy</p>
-                <time class="block mb-2  text-lg leading-none text-offwhite dark:slate-200">Worked September 2020 - December 2022</time> 
+                <h3 class="text-xl  text-offwhite dark:text-offwhite">Front End Web Developer</h3>
+                <p class="text-base  text-md text-offwhite dark:text-slate-300">Key RE Solutions</p>
+                <time class="block mb-2  text-lg leading-none text-offwhite dark:slate-200">December 2023 - Present</time> 
             </div>
         </li>
     <li class="my-12 sm:mb-0">
@@ -22,9 +22,9 @@
             <div class="flex w-full bg-golden h-0.5 dark:bg-golden"></div>
         </div>
         <div class="mt-3 sm:pr-8">
-            <h3 class="text-xl  text-offwhite dark:text-offwhite">Southern New Hampshire University</h3>
-            <p class="text-base  text-md text-slate-300 dark:text-slate-300">B.S. in Computer Science</p>
-            <time class="block text-lg mb-2 leading-none text-slate-200 dark:text-slate-200">Graduated November 2020</time>    
+            <h3 class="text-xl  text-offwhite dark:text-offwhite">Full Stack Web Developer</h3>
+            <p class="text-base  text-md text-slate-300 dark:text-slate-300">Freelance</p>
+            <time class="block text-lg mb-2 leading-none text-slate-200 dark:text-slate-200">January 2021 - Present</time>    
         </div>
     </li>
     <li class="mt-12 sm:mb-0">
@@ -35,9 +35,9 @@
             <div class="flex w-full bg-golden h-0.5 dark:bg-golden"></div>
         </div>
         <div class="mt-3 sm:pr-8">
-            <h3 class="text-xl  text-offhite dark:text-offwhite">IT Support Specialist</h3>
-            <p class="text-base  text-md text-slate-300 dark:text-slate-300">Vector Fields Inc</p>
-            <time class="block mb-2 leading-none text-lg text-slate-200 dark:text-slate-200">Worked May 2020 - September 2020</time>   
+            <h3 class="text-xl  text-offhite dark:text-offwhite">Southern New Hampshire University</h3>
+            <p class="text-base  text-md text-slate-300 dark:text-slate-300">B.S. in Computer Science</p>
+            <time class="block mb-2 leading-none text-lg text-slate-200 dark:text-slate-200">Graduated November 2020</time>   
         </div>
     </li>
 </ol>

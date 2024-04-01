@@ -8,8 +8,11 @@
         <p class=" mb-5">
             During this break, I stumbled upon my true passion: computer programming. So, I resumed my studies at Waubonsee Community College in the Fall of 2014, taking things slow with a half-time course load, and delving into the world of Computer Science. In the Fall of 2018, I decided to take the plunge and enrolled at Southern New Hampshire University. By the Summer of 2020, I had managed to earn my Bachelor's Degree in Computer Science, specializing in Software Engineering.
         </p>
-        <p class="">
+        <p class="mb-5">
             My interest in Computer Science has a meaningful foundation: my family background. My mom has spent most of her career as a Director of Business Administration. I remember sitting on her lap, listening in as she discussed various work matters with her colleagues. These conversations covered everything from customer retention strategies to providing feedback to executives and handling licensing issues. Those early experiences gave me a solid introduction to computers and software, ultimately leading me to pursue a career in Computer Science.
+        </p>
+        <p class="">
+            Currently, I'm working part time as a freelance full stack web developer and for Key RE Solutions to help develop and maintain their website.
         </p>
     </p>
 </template>
