@@ -1,4 +1,9 @@
 <template>
+  <div>
+    <slot />
+  </div>
+</template>
+<!-- <template>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,23 +50,16 @@
     import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
     import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
-    // Define the isActive method using useRoute
     const isActive = (route) => {
       const $route = useRoute();
       return $route.path === route;
     };
 
-    // Define the beforeRouteEnter navigation guard
     const beforeRouteEnter = (to, from, next) => {
       if (!to.hash) {
-        // Scroll to top of the page on route change
         window.scrollTo(0, 0);
 
-        // Set the active tab to "Home" on initial render
-        // You can modify this logic if you're using named routes
-        // For example, if your named route for Home is "home"
         if (to.path === '/') {
-          // Activate the "Home" tab
           next((vm) => {
             vm.isActive = isActive('/');
           });
@@ -84,4 +82,4 @@
         XMarkIcon,
       },
     });
-</script>
+</script> -->
