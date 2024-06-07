@@ -1,21 +1,35 @@
 <template>
   <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden hide-scrollbar">
     <!-- Header with Logo and Dropdown Menu -->
-    <header class="w-full flex justify-between items-center p-4 bg-transparent text-white fixed top-0 left-0 right-0 z-50">
-      <NuxtLink @click.prevent="scrollToSection('home')">
+    <header class="w-full flex justify-between items-center p-4 text-black fixed top-0 left-0 right-0 z-50">
+      <NuxtLink to="/" class="bg-black">
         <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" alt="Logo" class="h-12">
       </NuxtLink>
+      <!-- Original menu icon -->
       <div class="dropdown relative" @click.stop="">
         <button @click="toggleDropdown" class="dropdown-toggle bg-transparent text-white py-2 px-4 rounded inline-flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hover:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black hover:text-gray-900 {{ isDropdownOpen ? 'text-transparent' : '' }}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
-        <ul v-if="isDropdownOpen" class="dropdown-menu absolute text-gray-700 pt-1">
-          <li class=""><NuxtLink to="/about" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">My Resume</NuxtLink></li>
-          <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">My Projects</NuxtLink></li>
-          <li class=""><NuxtLink to="/contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Contact</NuxtLink></li>
-        </ul>
+        <!-- New menu with X button, overlaying the original icon -->
+        <div v-if="isDropdownOpen" class="dropdown-menu absolute top-0 right-0">
+          <ul class="bg-white rounded shadow-lg">
+            <!-- Move close button to the top right corner -->
+            <li class="border-t border-gray-200 pt-2 px-4 flex justify-end">
+              <!-- X button to close the menu -->
+              <button @click="toggleDropdown" class="text-gray-600 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 4.293a1 1 0 0 1 1.414 0L10 8.586l3.293-3.293a1 1 0 1 1 1.414 1.414L11.414 10l3.293 3.293a1 1 0 0 1-1.414 1.414L10 11.414l-3.293 3.293a1 1 0 0 1-1.414-1.414L8.586 10 5.293 6.707a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </li>
+            <!-- Menu items -->
+            <li class=""><NuxtLink to="/resume" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Resume</NuxtLink></li>
+            <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Projects</NuxtLink></li>
+            <li class=""><NuxtLink to="/contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">Contact</NuxtLink></li>
+          </ul>
+        </div>
       </div>
     </header>
 

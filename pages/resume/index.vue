@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div ref="container" class="container mx-auto py-8">
     <header class="w-full flex justify-between items-center p-4 text-black fixed top-0 left-0 right-0 z-50">
       <NuxtLink to="/" class="bg-black">
         <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" alt="Logo" class="h-12">
@@ -31,22 +31,14 @@
         </div>
       </div>
     </header>
-    <div class="flex min-h-screen items-center justify-center lg-custom-projects:items-start p-4 pt-20">
-      <div class="flex grid grid-cols-1 gap-8 lg-custom-projects:grid-cols-4 max-w-full">
-        <div class="lg-custom-projects:col-span-2">
-          <ProjectsPortfolio2023 />
-        </div>
-        <div class="lg-custom-projects:col-span-2">
-          <ProjectsDiscordbot />
-        </div>
-        <div class="lg-custom-projects:col-span-2">
-          <ProjectsEportfolio />
-        </div>
-        <div class="lg-custom-projects:col-span-2">
-          <ProjectsWeighttracker />
-        </div>
-      </div>
-    </div>
+
+    <!-- Your iframe code here -->
+    <iframe
+      src="/Matt_Lee_Dev_Resume.pdf"
+      class="w-full h-full"
+      frameborder="0"
+      scrolling="auto"
+    ></iframe>
   </div>
 </template>
 
@@ -61,11 +53,21 @@ export default {
   methods: {
     toggleDropdown() {
       this.isDropdownOpen = !this.isDropdownOpen;
+    },
+    adjustContainerHeight() {
+      this.$refs.container.style.height = `${window.innerHeight}px`;
     }
+  },
+  mounted() {
+    this.adjustContainerHeight();
+    window.addEventListener('resize', this.adjustContainerHeight);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.adjustContainerHeight);
   }
 };
 </script>
 
 <style scoped>
-/* You can add scoped styles here if needed */
+/* Your CSS styles here */
 </style>
