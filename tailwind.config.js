@@ -44,6 +44,7 @@ module.exports = {
         'cream' : "#FFF7D6",
         'cornflower' : '#1D4E73',
         'lightyellow' : '#F0DB4F',
+        'transparent' : 'transparent',
       },
     },
   },

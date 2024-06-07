@@ -1,5 +1,25 @@
 <template>
   <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden hide-scrollbar">
+    <!-- Header with Logo and Dropdown Menu -->
+    <header class="w-full flex justify-between items-center p-4 bg-gray-800 text-white fixed top-0 left-0 right-0 z-50">
+      <NuxtLink @click.prevent="scrollToSection('home')">
+        <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" alt="Logo" class="h-12">
+      </NuxtLink>
+      <div class="dropdown relative" @click.stop="">
+        <button @click="toggleDropdown" class="dropdown-toggle bg-gray-800 text-white py-2 px-4 rounded inline-flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hover:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+        <ul v-if="isDropdownOpen" class="dropdown-menu absolute text-gray-700 pt-1">
+          <li class=""><NuxtLink to="/" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Home</NuxtLink></li>
+          <li class=""><NuxtLink to="/about" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">About</NuxtLink></li>
+          <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Projects</NuxtLink></li>
+          <li class=""><NuxtLink to="/contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Contact</NuxtLink></li>
+        </ul>
+      </div>
+    </header>
+
     <!-- Vertical Navbar -->
     <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-white flex flex-col justify-center items-center space-y-4 p-4 z-50">
       <NuxtLink @click.prevent="scrollToSection('home')" :class="{ 'text-red-500': currentRoute === 'home' }" class="nav-link hover:underline text-black">□</NuxtLink>
@@ -10,8 +30,7 @@
       <NuxtLink @click.prevent="scrollToSection('contact')" :class="{ 'text-red-500': currentRoute === 'contact' }" class="nav-link hover:underline text-black">□</NuxtLink>
     </div>
 
-
-    <div id="home" class="snap-start w-screen h-screen flex items-center justify-center text-8xl space-x-20">
+    <div id="home" class="snap-start bg-blue-200 w-screen h-screen flex items-center justify-center text-8xl space-x-20">
       <p>Matt Lee</p>
       <p><avatar /></p>
     </div>
@@ -23,8 +42,8 @@
       <p><timeline /></p>
     </div>
     <div id="skills" class="snap-start bg-fuchsia-200 w-screen h-screen flex items-center justify-center text-8xl">
-    <p>Skills</p>
-  </div>
+      <p>Skills</p>
+    </div>
     <div id="projects" class="snap-start bg-yellow-200 w-screen h-screen flex items-center justify-center text-8xl">
       <p>Projects</p>
     </div>
@@ -82,8 +101,8 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-console.log('Router Object:', router);
 const currentRoute = ref(router.currentRoute.value.name);
+const isDropdownOpen = ref(false);
 
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
@@ -92,10 +111,18 @@ const scrollToSection = (sectionId) => {
   }
 };
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value;
+};
+
 router.afterEach((to) => {
   currentRoute.value = to.name;
-  console.log('Current Route:', currentRoute.value);
 });
+
 </script>
 
 <style scoped>
@@ -141,5 +168,13 @@ router.afterEach((to) => {
 
 .p-4 {
   padding: 1rem;
+}
+
+/* Styles for dropdown */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  display: none;
 }
 </style>
