@@ -1,23 +1,34 @@
 <template>
-  <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden">
-    <div class="snap-start w-screen h-screen flex items-center justify-center text-8xl space-x-20">
+  <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden hide-scrollbar">
+    <!-- Vertical Navbar -->
+    <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-white flex flex-col justify-center items-center space-y-4 p-4 z-50">
+      <NuxtLink @click.prevent="scrollToSection('home')" :class="{ 'text-red-500': currentRoute === 'home' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('about')" :class="{ 'text-red-500': currentRoute === 'about' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('timeline')" :class="{ 'text-red-500': currentRoute === 'timeline' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('skills')" :class="{ 'text-red-500': currentRoute === 'skills' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('projects')" :class="{ 'text-red-500': currentRoute === 'projects' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('contact')" :class="{ 'text-red-500': currentRoute === 'contact' }" class="nav-link hover:underline">□</NuxtLink>
+    </div>
+
+
+    <div id="home" class="snap-start w-screen h-screen flex items-center justify-center text-8xl space-x-20">
       <p>Matt Lee</p>
       <p><avatar /></p>
     </div>
-    <div class="snap-start bg-teal-200 w-screen h-screen flex items-center justify-center">
+    <div id="about" class="snap-start bg-teal-200 w-screen h-screen flex items-center justify-center">
       <p>About Me</p>
       <p><aboutMe /></p>
     </div>
-    <div class="snap-start bg-orange-200 w-screen h-screen flex items-center justify-center">
+    <div id="timeline" class="snap-start bg-orange-200 w-screen h-screen flex items-center justify-center">
       <p><timeline /></p>
     </div>
-    <div class="snap-start bg-fuchsia-200 w-screen h-screen flex items-center justify-center text-8xl">
-      <p>Skills</p>
-    </div>
-    <div class="snap-start bg-yellow-200 w-screen h-screen flex items-center justify-center text-8xl">
+    <div id="skills" class="snap-start bg-fuchsia-200 w-screen h-screen flex items-center justify-center text-8xl">
+    <p>Skills</p>
+  </div>
+    <div id="projects" class="snap-start bg-yellow-200 w-screen h-screen flex items-center justify-center text-8xl">
       <p>Projects</p>
     </div>
-    <div class="snap-start bg-green-200 w-screen h-screen flex flex-col justify-center items-center text-2xl">
+    <div id="contact" class="snap-start bg-green-200 w-screen h-screen flex flex-col justify-center items-center text-2xl">
       <p class="text-5xl font-semibold pb-5">
         Send me a message!
       </p>
@@ -64,11 +75,71 @@
       </div>
     </div>
   </div>
-  </template>
+</template>
 
 <script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+console.log('Router Object:', router);
+const currentRoute = ref(router.currentRoute.value.name);
+
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+router.afterEach((to) => {
+  currentRoute.value = to.name;
+  console.log('Current Route:', currentRoute.value);
+});
 </script>
 
 <style scoped>
+.hide-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Styles for the vertical navbar */
+.fixed {
+  position: fixed;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.hover\\:underline:hover {
+  text-decoration: underline;
+}
+
+.hover\\:text-golden:hover {
+  color: #d4af37;
+}
+
+.transform {
+  transform: translateY(-50%);
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.p-4 {
+  padding: 1rem;
+}
 </style>
