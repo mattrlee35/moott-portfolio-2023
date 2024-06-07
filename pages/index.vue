@@ -12,9 +12,8 @@
           </svg>
         </button>
         <ul v-if="isDropdownOpen" class="dropdown-menu absolute text-gray-700 pt-1">
-          <li class=""><NuxtLink to="/" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Home</NuxtLink></li>
-          <li class=""><NuxtLink to="/about" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">About</NuxtLink></li>
-          <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Projects</NuxtLink></li>
+          <li class=""><NuxtLink to="/about" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">My Resume</NuxtLink></li>
+          <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">My Projects</NuxtLink></li>
           <li class=""><NuxtLink to="/contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Contact</NuxtLink></li>
         </ul>
       </div>
@@ -22,13 +21,13 @@
 
     <!-- Vertical Navbar -->
     <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-white flex flex-col justify-center items-center space-y-4 p-4 z-50">
-      <NuxtLink @click.prevent="scrollToSection('home')" :class="{ 'text-red-500': currentRoute === 'home' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('about')" :class="{ 'text-red-500': currentRoute === 'about' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('timeline')" :class="{ 'text-red-500': currentRoute === 'timeline' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('skills')" :class="{ 'text-red-500': currentRoute === 'skills' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('projects')" :class="{ 'text-red-500': currentRoute === 'projects' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('contact')" :class="{ 'text-red-500': currentRoute === 'contact' }" class="nav-link hover:underline">□</NuxtLink>
-    </div>
+  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-lg">{{ currentRoute === 'home' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-lg">{{ currentRoute === 'about' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-lg">{{ currentRoute === 'timeline' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-lg">{{ currentRoute === 'skills' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-lg">{{ currentRoute === 'projects' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-lg">{{ currentRoute === 'contact' ? '◻' : '◆' }}</NuxtLink>
+</div>
 
     <div id="home" class="snap-start bg-blue-700 w-screen h-screen flex items-center justify-center text-8xl space-x-20">
       <p>Matt Lee</p>
@@ -97,7 +96,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -123,6 +122,30 @@ router.afterEach((to) => {
   currentRoute.value = to.name;
 });
 
+onMounted(() => {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5, // When 50% of the target is visible
+  };
+
+  const callback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Extract section name from the entry's target id
+        const sectionName = entry.target.id;
+        currentRoute.value = sectionName;
+      }
+    });
+  };
+
+  // Observe each section individually
+  const sections = document.querySelectorAll('.snap-start');
+  sections.forEach((section) => {
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(section);
+  });
+});
 </script>
 
 <style scoped>
