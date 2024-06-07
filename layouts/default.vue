@@ -1,68 +1,62 @@
 <template>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <Disclosure as="nav" class="z-20 bg-cornflower border-b-4 border-golden sticky top-0 z-10 hide-scrollbar" v-slot="{ open }">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 hide-scrollbar">
-        <div class="relative flex h-16 justify-between hide-scrollbar">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden hide-scrollbar">
-            <!-- Mobile menu button -->
-            <DisclosureButton class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span class="sr-only">Open main menu</span>
-              <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-              <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
-            </DisclosureButton>
-          </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center hide-scrollbar">
-            <div class="hidden sm:px-6 sm:flex hide-scrollbar"> 
-            <NuxtLink class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-2xl font-medium bg-darkerblue text-golden hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" to="/">Home</NuxtLink>
-            <NuxtLink class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-2xl font-medium text-offwhite hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" to="/about">About Me</NuxtLink>
-            <NuxtLink class="inline-flex items-center border-b-4 border-transparent px-5 pt-1 text-2xl font-medium text-offwhite hover:text-golden focus:bg-darkerblue focus:text-golden hover:underline" to="/projects">Projects</NuxtLink>
-            </div>
-          </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hide-scrollbar">
-            <!-- THIS IS A DIV FOR THE RIGHT SIDE OF THE NAV MAYBE USE FOR LATER -->
-          </div>
+  <div class="overflow-hidden hide-scrollbar">
+    <nav class="navbar flex items-center justify-between p-4">
+      <!-- Logo for returning to top -->
+      <div class="logo bg-black" @click="scrollToTop">
+        <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" alt="Logo" class="w-20 h-auto cursor-pointer" />
+      </div>
+
+      <!-- Dropdown menu -->
+      <div class="dropdown relative" @click="toggleDropdown">
+        <button class="dropbtn bg-transparent focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+        <div v-show="isDropdownOpen" class="dropdown-content absolute right-0 mt-2 bg-white rounded-md shadow-lg">
+          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Link 1</a>
+          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Link 2</a>
+          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Link 3</a>
         </div>
       </div>
-      <DisclosurePanel class="sm:hidden hide-scrollbar">
-        <div class="space-y-1 pb-4 pt-2">
-          <DisclosureButton as="a" href="/" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Home</DisclosureButton>
-          <DisclosureButton as="a" href="/about" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">About Me</DisclosureButton>
-          <DisclosureButton as="a" href="/projects" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-slate-300 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Projects</DisclosureButton>
-        </div>
-      </DisclosurePanel>
-  </Disclosure>
-  <div>
-    <slot />
+    </nav>
+
+    <!-- Render the page content -->
+    <NuxtPage />
   </div>
-</template> 
+</template>
 
-<script setup>
-  import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-  import { onMounted, onUnmounted } from 'vue'
-
-  onMounted(() => {
-  document.body.style.overflow = 'hidden';
-  });
-
-  onUnmounted(() => {
-  document.body.style.overflow = '';
-  });
+<script>
+export default {
+  data() {
+    return {
+      isDropdownOpen: false
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }
+};
 </script>
 
 <style scoped>
+/* Hide the vertical scrollbar while allowing scrolling */
 .hide-scrollbar {
+  overflow-y: auto; /* Enable vertical scrolling */
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
 
+/* Hide the scrollbar in WebKit browsers (like Chrome and Safari) */
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
 }
 </style>

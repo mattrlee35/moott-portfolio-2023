@@ -2,12 +2,12 @@
   <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden hide-scrollbar">
     <!-- Vertical Navbar -->
     <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-white flex flex-col justify-center items-center space-y-4 p-4 z-50">
-      <NuxtLink @click.prevent="scrollToSection('home')" :class="{ 'text-red-500': currentRoute === 'home' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('about')" :class="{ 'text-red-500': currentRoute === 'about' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('timeline')" :class="{ 'text-red-500': currentRoute === 'timeline' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('skills')" :class="{ 'text-red-500': currentRoute === 'skills' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('projects')" :class="{ 'text-red-500': currentRoute === 'projects' }" class="nav-link hover:underline">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('contact')" :class="{ 'text-red-500': currentRoute === 'contact' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('home')" :class="{ 'text-red-500': currentRoute === 'home' }" class="nav-link hover:underline text-black">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('about')" :class="{ 'text-red-500': currentRoute === 'about' }" class="nav-link hover:underline text-black">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('timeline')" :class="{ 'text-red-500': currentRoute === 'timeline' }" class="nav-link hover:underline text-black">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('skills')" :class="{ 'text-red-500': currentRoute === 'skills' }" class="nav-link hover:underline text-black">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('projects')" :class="{ 'text-red-500': currentRoute === 'projects' }" class="nav-link hover:underline text-black">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('contact')" :class="{ 'text-red-500': currentRoute === 'contact' }" class="nav-link hover:underline text-black">□</NuxtLink>
     </div>
 
 
