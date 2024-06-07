@@ -1,12 +1,12 @@
 <template>
   <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden hide-scrollbar">
     <!-- Header with Logo and Dropdown Menu -->
-    <header class="w-full flex justify-between items-center p-4 bg-gray-800 text-white fixed top-0 left-0 right-0 z-50">
+    <header class="w-full flex justify-between items-center p-4 bg-transparent text-white fixed top-0 left-0 right-0 z-50">
       <NuxtLink @click.prevent="scrollToSection('home')">
         <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" alt="Logo" class="h-12">
       </NuxtLink>
       <div class="dropdown relative" @click.stop="">
-        <button @click="toggleDropdown" class="dropdown-toggle bg-gray-800 text-white py-2 px-4 rounded inline-flex items-center">
+        <button @click="toggleDropdown" class="dropdown-toggle bg-transparent text-white py-2 px-4 rounded inline-flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hover:text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -22,15 +22,15 @@
 
     <!-- Vertical Navbar -->
     <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-white flex flex-col justify-center items-center space-y-4 p-4 z-50">
-      <NuxtLink @click.prevent="scrollToSection('home')" :class="{ 'text-red-500': currentRoute === 'home' }" class="nav-link hover:underline text-black">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('about')" :class="{ 'text-red-500': currentRoute === 'about' }" class="nav-link hover:underline text-black">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('timeline')" :class="{ 'text-red-500': currentRoute === 'timeline' }" class="nav-link hover:underline text-black">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('skills')" :class="{ 'text-red-500': currentRoute === 'skills' }" class="nav-link hover:underline text-black">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('projects')" :class="{ 'text-red-500': currentRoute === 'projects' }" class="nav-link hover:underline text-black">□</NuxtLink>
-      <NuxtLink @click.prevent="scrollToSection('contact')" :class="{ 'text-red-500': currentRoute === 'contact' }" class="nav-link hover:underline text-black">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('home')" :class="{ 'text-red-500': currentRoute === 'home' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('about')" :class="{ 'text-red-500': currentRoute === 'about' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('timeline')" :class="{ 'text-red-500': currentRoute === 'timeline' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('skills')" :class="{ 'text-red-500': currentRoute === 'skills' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('projects')" :class="{ 'text-red-500': currentRoute === 'projects' }" class="nav-link hover:underline">□</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('contact')" :class="{ 'text-red-500': currentRoute === 'contact' }" class="nav-link hover:underline">□</NuxtLink>
     </div>
 
-    <div id="home" class="snap-start bg-blue-200 w-screen h-screen flex items-center justify-center text-8xl space-x-20">
+    <div id="home" class="snap-start bg-blue-700 w-screen h-screen flex items-center justify-center text-8xl space-x-20">
       <p>Matt Lee</p>
       <p><avatar /></p>
     </div>
