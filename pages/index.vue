@@ -2,7 +2,7 @@
   <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden hide-scrollbar">
     <!-- Header with Logo and Dropdown Menu -->
     <header class="w-full flex justify-between items-center p-4 text-black fixed top-0 left-0 right-0 z-50">
-      <NuxtLink to="/" class="bg-black">
+      <NuxtLink @click.prevent="scrollToSection('home')" class="bg-black hover:cursor-pointer">
         <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" alt="Logo" class="h-12">
       </NuxtLink>
       <!-- Original menu icon -->
@@ -25,9 +25,9 @@
               </button>
             </li>
             <!-- Menu items -->
-            <li class=""><NuxtLink to="/resume" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Resume</NuxtLink></li>
+            <li class=""><NuxtLink to="/mattLeeDevResume.pdf" target="_blank" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Resume</NuxtLink></li>
             <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Projects</NuxtLink></li>
-            <li class=""><NuxtLink to="/contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">Contact</NuxtLink></li>
+            <li class=""><NuxtLink @click.prevent="scrollToSection('contact')" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap hover:cursor-pointer">Contact</NuxtLink></li>
           </ul>
         </div>
       </div>
@@ -35,12 +35,12 @@
 
     <!-- Vertical Navbar -->
     <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-white flex flex-col justify-center items-center space-y-4 p-4 z-50">
-  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-lg">{{ currentRoute === 'home' ? '◻' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-lg">{{ currentRoute === 'about' ? '◻' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-lg">{{ currentRoute === 'timeline' ? '◻' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-lg">{{ currentRoute === 'skills' ? '◻' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-lg">{{ currentRoute === 'projects' ? '◻' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-lg">{{ currentRoute === 'contact' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-lg hover:cursor-pointer hover:text-green-700">{{ currentRoute === 'home' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-lg hover:cursor-pointer hover:text-green-700">{{ currentRoute === 'about' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-lg hover:cursor-pointer hover:text-green-700">{{ currentRoute === 'timeline' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-lg hover:cursor-pointer hover:text-green-700">{{ currentRoute === 'skills' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-lg hover:cursor-pointer hover:text-green-700">{{ currentRoute === 'projects' ? '◻' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-lg hover:cursor-pointer hover:text-green-700">{{ currentRoute === 'contact' ? '◻' : '◆' }}</NuxtLink>
 </div>
 
     <div id="home" class="snap-start bg-blue-700 w-screen h-screen flex items-center justify-center text-8xl space-x-20">

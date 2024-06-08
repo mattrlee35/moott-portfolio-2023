@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="w-full flex justify-between items-center p-4 text-black fixed top-0 left-0 right-0 z-50">
-      <NuxtLink to="/" class="bg-black">
+      <NuxtLink @click.prevent="scrollToSection('home')" class="bg-black hover:cursor-pointer">
         <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" alt="Logo" class="h-12">
       </NuxtLink>
       <!-- Original menu icon -->
@@ -24,9 +24,9 @@
               </button>
             </li>
             <!-- Menu items -->
-            <li class=""><NuxtLink to="/resume" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Resume</NuxtLink></li>
+            <li class=""><NuxtLink to="/mattLeeDevResume.pdf" target="_blank" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Resume</NuxtLink></li>
             <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Projects</NuxtLink></li>
-            <li class=""><NuxtLink to="/contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">Contact</NuxtLink></li>
+            <li class=""><NuxtLink to="/#contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap hover:cursor-pointer">Contact</NuxtLink></li>
           </ul>
         </div>
       </div>

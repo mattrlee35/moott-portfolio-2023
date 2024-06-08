@@ -24,7 +24,7 @@
               </button>
             </li>
             <!-- Menu items -->
-            <li class=""><NuxtLink to="/resume" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Resume</NuxtLink></li>
+            <li class=""><NuxtLink to="/mattLeeDevResume.pdf" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Resume</NuxtLink></li>
             <li class=""><NuxtLink to="/projects" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">My Projects</NuxtLink></li>
             <li class=""><NuxtLink to="/contact" class="bg-gray-200 hover:bg-gray-400 py-2 px-16 block whitespace-nowrap">Contact</NuxtLink></li>
           </ul>
@@ -34,11 +34,17 @@
 
     <!-- Your iframe code here -->
     <iframe
-      src="/Matt_Lee_Dev_Resume.pdf"
+      src="\mattLeeDevResume.pdf"
       class="w-full h-full"
       frameborder="0"
       scrolling="auto"
     ></iframe>
+    <!-- Download link for the PDF -->
+    <div class="mt-4 text-center">
+      <a href="\mattLeeDevResume.pdf" download class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+        Download Resume
+      </a>
+    </div>
   </div>
 </template>
 
