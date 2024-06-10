@@ -19,7 +19,8 @@
   }
 }
 body {
-  font-family: 'rokkitt';
-  background-color: aqua;
+  font-family: 'oswald';
+  color: 'darkerblue';
+  background-color: whitesmoke;
   overflow: hidden;
 }

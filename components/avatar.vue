@@ -1,3 +1,3 @@
 <template>
-    <img src="https://i.imgur.com/y6nipxG.png" class="align-middle h-45 -m-16 -ml-20 lg:-ml-16 max-w-[500px] border-4 border-golden border-solid"/>
+    <img src="https://i.imgur.com/y6nipxG.png" class=" shadow-2xl align-middle h-96 max-w-[400px] bg-gray-400"/>
 </template>

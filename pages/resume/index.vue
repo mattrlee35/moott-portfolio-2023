@@ -1,3 +1,4 @@
+<!-- This page doesnt exist currently. MAYBE A FUTURE UPDATE! -->
 <template>
   <div ref="container" class="container mx-auto py-8">
     <header class="w-full flex justify-between items-center p-4 text-black fixed top-0 left-0 right-0 z-50">
