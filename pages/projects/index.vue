@@ -6,7 +6,7 @@
       </NuxtLink>
       <!-- Original menu icon -->
       <div class="dropdown relative" @click.stop="">
-        <button @click="toggleDropdown" class="dropdown-toggle bg-transparent text-white py-2 px-4 rounded inline-flex items-center">
+        <button @click="toggleDropdown" class="dropdown-toggle bg-transparent text-gray-300 py-2 px-4 rounded inline-flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black hover:text-gray-900 {{ isDropdownOpen ? 'text-transparent' : '' }}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>

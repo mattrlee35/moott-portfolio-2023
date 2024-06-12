@@ -1,13 +1,13 @@
 <template>
   <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden text-darkerblue hide-scrollbar">
     <!-- Header with Logo and Dropdown Menu -->
-    <header class="w-full flex justify-between items-center p-4 text-white fixed top-0 left-0 right-0 z-50">
+    <header class="w-full flex justify-between items-center p-4 text-gray-300 fixed top-0 left-0 right-0 z-50">
       <NuxtLink @click.prevent="scrollToSection('home')" 
           class="bg-transparent hover:cursor-pointer">
   <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" 
        alt="Logo" 
        class="h-12"
-       :class="[currentRoute === 'home' || currentRoute === 'timeline' || currentRoute === 'projects' ? 'filter-none' : 'filter-darkerblue', 'hover-filter-lighterblue']">
+       :class="[currentRoute === 'home' || currentRoute === 'timeline' || currentRoute === 'projects' ? 'filter-gray-300' : 'filter-darkerblue', 'hover-filter-lighterblue']">
 </NuxtLink>
 
 
@@ -22,7 +22,7 @@
        fill="none" 
        viewBox="0 0 24 24" 
        stroke="currentColor"
-       :class="{ 'text-offwhite': currentRoute === 'home' || currentRoute === 'timeline' || currentRoute === 'projects',
+       :class="{ 'text-gray-300': currentRoute === 'home' || currentRoute === 'timeline' || currentRoute === 'projects',
                  'text-darkerblue': currentRoute === 'about' || currentRoute === 'skills' || currentRoute === 'contact',
                  'hover:text-lighterblue': true }">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -66,40 +66,40 @@
     </header>
 
     <!-- Vertical Navbar -->
-    <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-offwhite flex flex-col justify-center items-center space-y-2 p-4 z-50">
-  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'home','text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-white': currentRoute === 'projects'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'about', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-white': currentRoute === 'projects'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'timeline', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-white': currentRoute === 'projects' }">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'skills', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-white': currentRoute === 'projects' }">{{ currentRoute === 'skills' ? '◼' : '◆' }}</NuxtLink>
+    <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-gray-300 flex flex-col justify-center items-center space-y-2 p-4 z-50">
+  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'home','text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-gray-300': currentRoute === 'projects'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'about', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-gray-300': currentRoute === 'projects'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'timeline', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-gray-300': currentRoute === 'projects' }">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'skills', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-gray-300': currentRoute === 'projects' }">{{ currentRoute === 'skills' ? '◼' : '◆' }}</NuxtLink>
   <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'projects', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home' }">{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'contact', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-white': currentRoute === 'projects' }">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-lighterblue': currentRoute === 'contact', 'text-darkerblue': currentRoute !== 'timeline' && currentRoute !== 'home', 'text-gray-300': currentRoute === 'projects' }">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
 </div>
 
 <div id="home" class="snap-start w-screen h-screen relative flex flex-col">
-  <div class="bg-darkerblue text-offwhite w-full h-5/6 flex items-center justify-center text-8xl space-x-20" style="background-image: url(/testBG.png); background-size: cover; background-position: center;">
+  <div class="bg-darkerblue text-gray-300 w-full h-5/6 flex items-center justify-center text-8xl space-x-20" style="background-image: url(/testBG.png); background-size: cover; background-position: center;">
     <div class="flex items-center justify-between px-10 w-8/12">
       <div>
         <p class="pb-10 text-red">Matt Lee</p>
         <p class="text-7xl pb-4 text-red">Front End Developer.</p>
-        <p class="text-lg pb-20">I like to craft solid and scalable frontend products with great user experiences.</p>
+        <p class="text-lg pb-20 text-gray-300">I like to craft solid and scalable frontend products with great user experiences.</p>
         <div class="flex">
-          <p class="text-base mr-20 w-1/3">Highly skilled at progressive enhancement, design systems & UI Engineering. </p>
-          <p class="text-base w-1/3">Proven experience building successful products for clients.</p>
+          <p class="text-base mr-20 w-1/3 text-gray-300">Highly skilled at progressive enhancement, design systems & UI Engineering. </p>
+          <p class="text-base w-1/3 text-gray-300">Proven experience building successful products for clients.</p>
         </div>
       </div>
       <avatar />
     </div>
   </div>
-  <div class="bg-offwhite h-1/6"></div>
+  <div class="bg-gray-300 h-1/6"></div>
 </div>
-    <div id="about" class="snap-start bg-offwhite w-screen h-screen flex">
+    <div id="about" class="snap-start bg-gray-300 w-screen h-screen flex">
       <p>About Me</p>
       <p><aboutMe /></p>
     </div>
     <div id="timeline" class="snap-start bg-darkerblue w-screen h-screen flex items-center justify-center">
       <p><timeline /></p>
     </div>
-    <div id="skills" class="snap-start bg-offwhite w-screen h-screen flex items-center justify-center text-8xl">
+    <div id="skills" class="snap-start bg-bg-gray-300 w-screen h-screen flex items-center justify-center text-8xl">
       <p>Skills</p>
     </div>
     <div id="projects" class="snap-start bg-red w-screen h-screen flex items-center justify-center text-8xl">
@@ -111,7 +111,7 @@
   </NuxtLink>
 </div>
     </div>
-    <div id="contact" class="snap-start bg-offwhite w-screen h-screen flex flex-col justify-center items-center text-2xl">
+    <div id="contact" class="snap-start bg-bg-gray-300 w-screen h-screen flex flex-col justify-center items-center text-2xl">
       <p class="text-5xl font-semibold mt-10 pb-5">
         Send me a message!
       </p>
@@ -252,10 +252,6 @@ onMounted(() => {
   background-color: #2d3748;
 }
 
-.text-white {
-  color: #ffffff;
-}
-
 .hover\\:underline:hover {
   text-decoration: underline;
 }
@@ -296,8 +292,8 @@ onMounted(() => {
   .filter-darkerblue {
     filter: brightness(0) saturate(100%) invert(11%) sepia(71%) saturate(742%) hue-rotate(169deg) brightness(92%) contrast(95%);
   }
-  .filter-offwhite {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(100%) contrast(102%);
+  .filter-gray-300 {
+    filter: brightness(0.85) saturate(0%) contrast(95%);
   }
   .filter-lighterblue {
     filter: brightness(0) saturate(100%) invert(77%) sepia(19%) saturate(1397%) hue-rotate(158deg) brightness(86%) contrast(85%);
