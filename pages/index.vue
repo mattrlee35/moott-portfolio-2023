@@ -18,7 +18,7 @@
         :class="{ 'text-darkerblue': currentRoute !== 'about' && currentRoute !== 'skills' && currentRoute !== 'contact', 
                   'text-lighterblue': currentRoute === 'about' || currentRoute === 'skills' || currentRoute === 'contact' }">
   <svg xmlns="http://www.w3.org/2000/svg" 
-       class="h-6 w-6" 
+       class="h-8 w-8" 
        fill="none" 
        viewBox="0 0 24 24" 
        stroke="currentColor"
@@ -35,7 +35,7 @@
             <li class="pt-2 pl-96 pr-4 flex justify-end">
               <!-- X button to close the menu -->
               <button @click="toggleDropdown" class="text-darkerblue hover:text-red p-0 bg-transparent border-none cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 18L18 6M6 6l12 12"/>
                 </svg>
               </button>
@@ -45,7 +45,7 @@
             <li class=""><NuxtLink to="/mattLeeDevResume.pdf" target="_blank" class="hover:text-red hover:underline text-darkerblue pl-4 py-4 text-xl block whitespace-nowrap justify-start">Resume</NuxtLink></li>
             <li class=""><NuxtLink @click.prevent="scrollToSection('contact')" class="hover:text-red hover:underline text-darkerblue pl-4 py-4 text-xl block whitespace-nowrap hover:cursor-pointer justify-start">Contact Me</NuxtLink></li>
             <li class="">
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row justify-center mt-10">
           <NuxtLink to="https://github.com/mattrlee35" target="_blank">
           <button type="button" class="w-full justify-center inline-flex text-center text-darkerblue items-center gap-x-2 px-3.5 py-2.5 text-lg hover:underline hover:text-red">
             <svg class="h-10 w-10"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>
@@ -76,8 +76,8 @@
 </div>
 
 <div id="home" class="snap-start w-screen h-screen relative flex flex-col">
-  <div class="bg-darkerblue text-gray-300 w-full h-5/6 flex items-center justify-center text-8xl space-x-20" style="background-image: url(/testBG.png); background-size: cover; background-position: center;">
-    <div class="flex items-center justify-between px-10 w-8/12">
+  <div class="bg-darkerblue text-gray-300 w-full h-5/6 flex items-center justify-center text-8xl space-x-20" style="background-image: url(/landingPage.svg); background-size: cover; background-position: center;">
+    <div class="flex items-center justify-between px-10 w-7/12">
       <div>
         <p class="pb-10 text-red">Matt Lee</p>
         <p class="text-7xl pb-4 text-red">Front End Developer.</p>
@@ -99,19 +99,19 @@
     <div id="timeline" class="snap-start bg-darkerblue w-screen h-screen flex items-center justify-center">
       <p><timeline /></p>
     </div>
-    <div id="skills" class="snap-start bg-bg-gray-300 w-screen h-screen flex items-center justify-center text-8xl">
+    <div id="skills" class="snap-start bg-gray-300 w-screen h-screen flex items-center justify-center text-8xl">
       <p>Skills</p>
     </div>
     <div id="projects" class="snap-start bg-red w-screen h-screen flex items-center justify-center text-8xl">
       <div class="bg-offwhite w-1/2 h-1/2 flex flex-col text-5xl items-center justify-center">
   <p class="text-center mb-10">Here you can find all my projects!</p>
   <p class="text-center text-3xl mb-28">This is work that I have saved through the years of coding.</p>
-  <NuxtLink to="/projects" class="mt-4 border border-darkerblue hover:bg-darkerblue hover:text-lighterblue hover:border-offwhite text-lg bordertext-darkerblue font-bold py-2 px-4">
+  <NuxtLink to="/projects" class="mt-4 border border-darkerblue hover:bg-darkerblue hover:text-offwhite hover:border-offwhite text-lg bordertext-darkerblue font-bold py-2 px-4">
     See my Projects!
   </NuxtLink>
 </div>
     </div>
-    <div id="contact" class="snap-start bg-bg-gray-300 w-screen h-screen flex flex-col justify-center items-center text-2xl">
+    <div id="contact" class="snap-start bg-gray-300 w-screen h-screen flex flex-col justify-center items-center text-2xl">
       <p class="text-5xl font-semibold mt-10 pb-5">
         Send me a message!
       </p>
@@ -120,28 +120,28 @@
         to say hello? Go ahead.
       </p>
     <div class="w-full max-w-md">
-      <form action="https://formspree.io/f/xeqyyqdq" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form action="https://formspree.io/f/xeqyyqdq" method="POST" class="bg-gray-300 px-8 pt-6 pb-8 mb-4">
         <!-- Form fields -->
         <!-- Name -->
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+          <label class="block text-gray-700 text-sm bg-gray-300 font-bold mb-2" for="name">
             Name
           </label>
-          <input v-model="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name">
+          <input v-model="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-300 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name">
         </div>
         <!-- Email -->
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
             Email
           </label>
-          <input v-model="email" name="_replyto" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
+          <input v-model="email" name="_replyto" class="shadow appearance-none border rounded bg-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
         </div>
         <!-- Message -->
         <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+          <label class="block text-gray-700 bg-gray-300 text-sm font-bold mb-2" for="message">
             Message
           </label>
-          <textarea v-model="message" name="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Message"></textarea>
+          <textarea v-model="message" name="message" class="shadow appearance-none bg-gray-300 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Message"></textarea>
         </div>
         <!-- Submit button -->
         <div class="flex items-center justify-center">
