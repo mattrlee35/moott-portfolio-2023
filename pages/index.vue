@@ -145,7 +145,7 @@
         </div>
         <!-- Submit button -->
         <div class="flex items-center justify-center">
-          <button class="mt-4 border border-darkerblue hover:bg-darkerblue hover:text-lighterblue hover:border-offwhite text-lg bordertext-darkerblue font-bold py-2 px-4" type="submit">
+          <button class="mt-4 border border-darkerblue hover:bg-darkerblue hover:text-offwhite hover:border-offwhite text-lg bordertext-darkerblue font-bold py-2 px-4" type="submit">
             Send
           </button>
         </div>
