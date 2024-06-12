@@ -1,8 +1,8 @@
 <template>
     <div class="max-w-md py-4 px-4 bg-cornflower  shadow-lg rounded-lg border-4 border-golden">
         <div class="flex justify-end -mt-10">
-            <img class="w-12 h-12 object-cover bg-darkerblue rounded-full border-2 border-golden" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/nuxtjs/nuxtjs-original.svg">
-            <img class="w-12 h-12 object-cover bg-darkerblue rounded-full border-2 border-golden" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tailwindcss/tailwindcss-plain.svg">
+            <img class="w-12 h-12 object-cover bg-darkerblue rounded-full border-2 border-red" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/nuxtjs/nuxtjs-original.svg">
+            <img class="w-12 h-12 object-cover bg-darkerblue rounded-full border-2 border-red" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tailwindcss/tailwindcss-plain.svg">
         </div>
         <div>
             <h2 class="text-offwhite text-3xl font-semibold">Portfolio 2023</h2>

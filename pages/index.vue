@@ -111,73 +111,94 @@
   </NuxtLink>
 </div>
     </div>
-    <div id="contact" class="snap-start bg-gray-300 w-screen h-screen flex flex-col justify-center items-center text-2xl">
-      <p class="text-5xl font-semibold mt-10 pb-5">
-        Send me a message!
-      </p>
-      <p class="pb-5">
-        Got a question or proposal, or just want
-        to say hello? Go ahead.
-      </p>
-    <div class="w-full max-w-md">
-      <form action="https://formspree.io/f/xeqyyqdq" method="POST" class="bg-gray-300 px-8 pt-6 pb-8 mb-4">
-        <!-- Form fields -->
-        <!-- Name -->
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm bg-gray-300 font-bold mb-2" for="name">
-            Name
-          </label>
-          <input v-model="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-300 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name">
+  <div id="contact" class="snap-start bg-gray-300 w-screen h-screen flex flex-col justify-center items-center text-2xl">
+  <p class="text-5xl font-semibold mt-10 pb-5 text-center">
+    Send me a message!
+  </p>
+  <p class="pb-5 text-center">
+    Got a question or proposal, or just want
+    to say hello? Go ahead.
+  </p>
+  <div class="w-full flex justify-center items-center">
+    <form action="https://formspree.io/f/xeqyyqdq" method="POST" class="bg-gray-300 px-8 pt-6 pb-8 mb-4 w-full max-w-full">
+      <!-- Name and Email side by side -->
+      <div class="flex w-full mb-4 space-x-40 justify-center">
+        <div class="w-2/12">
+          <label class="block text-golden text-sm mb-2 text-center " for="name">Your Name</label>
+          <input
+            v-model="name"
+            name="name"
+            class="border-b w-full border-golden py-2 bg-gray-300 text-golden focus:outline-none focus:border-lighterblue"
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+          />
         </div>
-        <!-- Email -->
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-            Email
-          </label>
-          <input v-model="email" name="_replyto" class="shadow appearance-none border rounded bg-gray-300 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
+        <div class="w-2/12">
+          <label class="block text-golden text-sm mb-2 text-center" for="email">Email Address</label>
+          <input
+            v-model="email"
+            name="_replyto"
+            class="border-b border-golden w-full py-2 bg-gray-300 text-golden focus:outline-none focus:border-lighterblue"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+          />
         </div>
-        <!-- Message -->
-        <div class="mb-6">
-          <label class="block text-gray-700 bg-gray-300 text-sm font-bold mb-2" for="message">
-            Message
-          </label>
-          <textarea v-model="message" name="message" class="shadow appearance-none bg-gray-300 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Message"></textarea>
-        </div>
-        <!-- Submit button -->
-        <div class="flex items-center justify-center">
-          <button class="mt-4 border border-darkerblue hover:bg-darkerblue hover:text-offwhite hover:border-offwhite text-lg bordertext-darkerblue font-bold py-2 px-4" type="submit">
-            Send
-          </button>
-        </div>
-      </form>
-  </div>
-      <div class="my-5 sm:my-5 flex w-1/2 bg-black h-0.5 dark:bg-black"></div>
-      <div class="flex flex-row">
-        <NuxtLink to="https://github.com/mattrlee35" target="_blank">
-          <button type="button" class="w-full justify-center inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 text-lg shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
-            <svg class="h-10 w-10"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>
-          </button>
-        </NuxtLink>
-        <NuxtLink class="" to="https://www.linkedin.com/in/matthew-lee-69647126a/" target="_blank">
-          <button type="button" class="w-full justify-center inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 text-lg shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-            </svg>
-          </button>
-        </NuxtLink>
-        <NuxtLink class="" to="/projects" target="_blank">
-          <button type="button" class="w-full justify-center inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
-            Projects
-          </button>
-        </NuxtLink>
-        <NuxtLink class="" to="/projects" target="_blank">
-          <button type="button" class="w-full justify-center inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
-            Resume
-          </button>
-        </NuxtLink>
       </div>
-    </div>
+      <!-- Message -->
+      <div class="w-full flex justify-center items-center">
+        <div class="w-5/12">
+          <label class="text-golden text-sm mb-2 block text-center" for="message">Your Message</label>
+          <textarea
+            v-model="message"
+            name="message"
+            class="border-b border-golden w-full py-2 bg-gray-300 text-golden focus:outline-none focus:border-lighterblue"
+            id="message"
+            placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+          ></textarea>
+        </div>
+      </div>
+      <!-- Submit button -->
+      <div class="flex items-center justify-center">
+        <button
+          class="mt-4 border border-blue-700 bg-transparent hover:bg-blue-700 hover:text-white text-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Shoot
+        </button>
+      </div>
+    </form>
   </div>
+  <div class="my-5 w-4/5 bg-black h-0.5 dark:bg-black"></div>
+  <div class="flex flex-wrap justify-center gap-4">
+    <NuxtLink to="https://github.com/mattrlee35" target="_blank">
+      <button type="button" class="inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 text-lg shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
+        <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+        </svg>
+      </button>
+    </NuxtLink>
+    <NuxtLink to="https://www.linkedin.com/in/matthew-lee-69647126a/" target="_blank">
+      <button type="button" class="inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 text-lg shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+        </svg>
+      </button>
+    </NuxtLink>
+    <NuxtLink to="/projects" target="_blank">
+      <button type="button" class="inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
+        Projects
+      </button>
+    </NuxtLink>
+    <NuxtLink to="/projects" target="_blank">
+      <button type="button" class="inline-flex text-center items-center gap-x-2 px-3.5 py-2.5 shadow-sm hover:underline hover:text-golden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border-2 border-black">
+        Resume
+      </button>
+    </NuxtLink>
+  </div>
+</div>
+</div>
 </template>
 
 <script setup>
@@ -301,4 +322,24 @@ onMounted(() => {
   .hover-filter-lighterblue:hover {
     filter: brightness(0) saturate(100%) invert(77%) sepia(19%) saturate(1397%) hue-rotate(158deg) brightness(86%) contrast(85%);
   }
+  input,
+textarea {
+  text-align: left; /* Center text */
+  margin-bottom: 1rem; /* Space between fields */
+  font-size: 1rem; /* Consistent font size */
+}
+label {
+  text-align: left; /* Center label text */
+  display: block; /* Ensure labels take full width */
+  margin-bottom: 0.5rem; /* Space below labels */
+}
+button {
+  text-align: left; /* Center button text */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+}
+form {
+  padding: 2rem;
+}
 </style>

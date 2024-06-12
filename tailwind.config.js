@@ -37,7 +37,7 @@ module.exports = {
       colors: {
         'aquagreen': '#B5CA8D',
         'aquamarine' : '#426B69',
-        'golden' : "#6E3A50",
+        'golden' : "#675493",
         'darkerblue' : "#002C3E",
         'lighterblue' : "#78BCC4",
         'offwhite': "#F7F8F3",
