@@ -122,56 +122,62 @@
     to say hello? Go ahead.
   </p>
   <div class="w-full flex justify-center items-center">
-    <form action="https://formspree.io/f/xeqyyqdq" method="POST" class="bg-black px-8 pt-6 pb-8 mb-4 w-full max-w-full">
-      <!-- Name and Email side by side -->
-      <div class="flex w-full mb-4 space-x-40 justify-center">
-        <div class="w-2/12">
-          <label class="block bg-black text-base mb-2 text-center " for="name">Your Name</label>
-          <input
-            v-model="name"
-            name="name"
-            class="border-b w-full bg-black border-purple py-2 bg-black text-sm focus:outline-none focus:border-aquagreen"
-            id="name"
-            type="text"
-            placeholder="Enter your name"
-          />
-        </div>
-        <div class="w-2/12">
-          <label class="block text-base mb-2 text-center" for="email">Email Address</label>
-          <input
-            v-model="email"
-            name="_replyto"
-            class="border-b border-purple w-full py-2 bg-black text-sm focus:outline-none focus:border-aquagreen"
-            id="email"
-            type="email"
-            placeholder="Enter your email address"
-          />
-        </div>
+  <form action="https://formspree.io/f/xeqyyqdq" method="POST" class="bg-black px-8 pt-6 pb-8 mb-4 w-full max-w-full">
+    <!-- Name and Email side by side -->
+    <div class="flex w-full mb-4 space-x-40 justify-center">
+      <div class="w-2/12">
+        <label id="nameLabel" :class="{'text-aquagreen': isNameFocused, 'text-plum': !isNameFocused}" class="bg-black mb-2 text-center" for="name">Your Name</label>
+        <input
+          v-model="name"
+          name="name"
+          class="border-b w-full bg-black border-purple py-2 text-aquagreen text-sm focus:outline-none focus:border-aquagreen"
+          id="name"
+          type="text"
+          placeholder="Enter your name"
+          @focus="isNameFocused = true"
+          @blur="isNameFocused = false"
+        />
       </div>
-      <!-- Message -->
-      <div class="w-full flex justify-center items-center">
-        <div class="w-5/12">
-          <label class="text-purple text-base mb-2 block text-center" for="message">Your Message</label>
-          <textarea
-            v-model="message"
-            name="message"
-            class="border-b border-purple w-full py-2 bg-black text-purple text-sm focus:outline-none focus:border-aquagreen"
-            id="message"
-            placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
-          ></textarea>
-        </div>
+      <div class="w-2/12">
+        <label id="emailLabel" :class="{'text-aquagreen': isEmailFocused, 'text-plum': !isEmailFocused}" class="block text-base mb-2 text-center" for="email">Email Address</label>
+        <input
+          v-model="email"
+          name="_replyto"
+          class="border-b border-purple w-full py-2 bg-black text-aquagreen text-sm focus:outline-none focus:border-aquagreen"
+          id="email"
+          type="email"
+          placeholder="Enter your email address"
+          @focus="isEmailFocused = true"
+          @blur="isEmailFocused = false"
+        />
       </div>
-      <!-- Submit button -->
-      <div class="flex items-center justify-center">
-        <button
-          class="mt-4 border border-aquagreen bg-transparent hover:bg-aquagreen hover:text-black text-aquagreen font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="submit"
-        >
-          Shoot
-        </button>
+    </div>
+    <!-- Message -->
+    <div class="w-full flex justify-center items-center">
+      <div class="w-5/12">
+        <label id="messageLabel" :class="{'text-aquagreen': isMessageFocused, 'text-puple': !isMessageFocused}" class="text-purple text-base mb-2 block text-center" for="message">Your Message</label>
+        <textarea
+          v-model="message"
+          name="message"
+          class="border-b border-purple w-full py-2 bg-black text-aquagreen text-sm focus:outline-none focus:border-aquagreen"
+          id="message"
+          placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+          @focus="isMessageFocused = true"
+          @blur="isMessageFocused = false"
+        ></textarea>
       </div>
-    </form>
-  </div>
+    </div>
+    <!-- Submit button -->
+    <div class="flex items-center justify-center">
+      <button
+        class="mt-4 border border-aquagreen bg-transparent hover:bg-aquagreen hover:text-black text-aquagreen font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="submit"
+      >
+        Shoot
+      </button>
+    </div>
+  </form>
+</div>
   <div class="my-5 w-4/5 bg-aquagreen h-0.5"></div>
   <div class="flex flex-wrap justify-center text-aquagreen gap-4">
     <NuxtLink to="https://github.com/mattrlee35" target="_blank">
@@ -210,6 +216,10 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 const currentRoute = ref(router.currentRoute.value.name);
 const isDropdownOpen = ref(false);
+
+const isNameFocused = ref(false);
+const isEmailFocused = ref(false);
+const isMessageFocused = ref(false);
 
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
@@ -255,6 +265,10 @@ onMounted(() => {
   });
 });
 </script>
+
+
+
+
 
 <style scoped>
 .hide-scrollbar {
@@ -313,13 +327,11 @@ onMounted(() => {
 textarea {
   text-align: left; /* Center text */
   margin-bottom: 1rem; /* Space between fields */
-  color: #630090;
 }
 label {
   text-align: left; /* Center label text */
   display: block; /* Ensure labels take full width */
   margin-bottom: 0.5rem; /* Space below labels */
-  color: #630090;
 }
 button {
   text-align: left; /* Center button text */
