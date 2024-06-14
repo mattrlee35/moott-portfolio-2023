@@ -69,12 +69,12 @@
 
     <!-- Vertical Navbar -->
     <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-aquagreen flex flex-col justify-center items-center space-y-2 p-4 z-50">
-  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'home','text-purple': currentRoute !== 'projects' && currentRoute !== 'home' && currentRoute !=='contact'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'about', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='about'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'timeline', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact'&& currentRoute !=='timeline'}">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'skills', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='skills'}">{{ currentRoute === 'skills' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'projects', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact'}">{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-lg hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'contact', 'text-purple': currentRoute !== 'projects'}">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'home','text-purple': currentRoute !== 'projects' && currentRoute !== 'home' && currentRoute !=='contact'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'about', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='about'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'timeline', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact'&& currentRoute !=='timeline'}">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'skills', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='skills'}">{{ currentRoute === 'skills' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'projects', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact'}">{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'contact', 'text-purple': currentRoute !== 'projects'}">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
 </div>
 
 <div id="home" class="snap-start w-screen h-screen relative flex flex-col">
@@ -92,16 +92,16 @@
       <avatar />
     </div>
   </div>
-  <div class="bg-gray-300 h-1/6"></div>
+  <div class="bg-lightgray h-1/6"></div>
 </div>
-    <div id="about" class="snap-start bg-gray-300 w-screen h-screen flex">
+    <div id="about" class="snap-start bg-lightgray w-screen h-screen flex">
       <p>About Me</p>
       <p><aboutMe /></p>
     </div>
     <div id="timeline" class="snap-start bg-aquagreen w-screen h-screen flex items-center justify-center">
       <p><timeline /></p>
     </div>
-    <div id="skills" class="snap-start bg-gray-300 w-screen h-screen flex items-center justify-center text-8xl">
+    <div id="skills" class="snap-start bg-lightgray w-screen h-screen flex items-center justify-center text-8xl">
       <p>Skills</p>
     </div>
     <div id="projects" class="snap-start bg-purple text-silver w-screen h-screen flex items-center justify-center text-8xl">
