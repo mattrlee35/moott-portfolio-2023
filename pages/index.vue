@@ -1,7 +1,7 @@
 <template>
   <div class="snap-y snap-mandatory w-screen h-screen overflow-y-visible overflow-x-hidden text-purple hide-scrollbar">
     <!-- Header with Logo and Dropdown Menu -->
-    <header class="w-full flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-50">
+    <header class="w-full flex justify-between items-center p-16 fixed top-0 left-0 right-0 z-50">
       <NuxtLink @click.prevent="scrollToSection('home')" class="bg-transparent hover:cursor-pointer">
   <img src="https://static.wixstatic.com/media/175259_da12801d620d4224b0e119e4014d668a~mv2.png/v1/fill/w_478,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MML%20White.png" 
        alt="Logo" 
@@ -17,35 +17,34 @@
         :class="{ 'text-purple': currentRoute !== 'about' && currentRoute !== 'skills' && currentRoute !== 'contact', 
                   'text-aquagreen': currentRoute === 'about' || currentRoute === 'skills' || currentRoute === 'contact', }">
   <svg xmlns="http://www.w3.org/2000/svg" 
-       class="h-8 w-8" 
+       class="h-10 w-10" 
        fill="none" 
        viewBox="0 0 24 24" 
        stroke="currentColor"
-       :class="{ 'text-aquagreen': currentRoute === 'contact' ,
-                 'text-purple': currentRoute === 'about' || currentRoute === 'skills' || currentRoute === 'timeline',
-                 'text-black': currentRoute === 'projects' || currentRoute === 'home' ,
+       :class="{ 'text-lightgray': currentRoute === 'contact' ,
+                 'text-black': currentRoute === 'projects' || currentRoute === 'home' || currentRoute === 'about' || currentRoute === 'timeline',
                  'hover:text-silver': currentRoute === 'home' || currentRoute === 'projects',
                  'hover:text-black': currentRoute === 'about' || currentRoute === 'timeline' || currentRoute === 'skills',
-                 'hover:text-purple': currentRoute === 'contact'}">
+                 'hover:text-plum': currentRoute === 'contact'}">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
   </svg>
 </button>
         <!-- New menu with X button, overlaying the original icon -->
-        <div class="dropdown-menu absolute bg-white justify-start border top-0 right-0 " :class="{ 'block': isDropdownOpen, 'hidden': !isDropdownOpen }">
+        <div class="dropdown-menu absolute bg-white justify-start top-0 right-0 " :class="{ 'block': isDropdownOpen, 'hidden': !isDropdownOpen }">
           <ul class="">
             <!-- Move close button to the top right corner -->
             <li class="pt-2 pl-96 pr-4 flex justify-end">
               <!-- X button to close the menu -->
               <button @click="toggleDropdown" class="text-purple hover:text-aquagreen p-0 bg-transparent border-none cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 18L18 6M6 6l12 12"/>
                 </svg>
               </button>
             </li>
             <!-- Menu items -->
-            <li class=""><NuxtLink to="/projects" class="hover:text-aquagreen hover:underline pl-4 py-4 text-xl text-purple block whitespace-nowrap justify-start ">Projects</NuxtLink></li>
-            <li class=""><NuxtLink to="/mattLeeDevResume.pdf" target="_blank" class="hover:text-aquagreen hover:underline text-purple pl-4 py-4 text-xl block whitespace-nowrap justify-start">Resume</NuxtLink></li>
-            <li class=""><NuxtLink @click.prevent="scrollToSection('contact')" class="hover:text-aquagreen hover:underline text-purple pl-4 py-4 text-xl block whitespace-nowrap hover:cursor-pointer justify-start">Contact Me</NuxtLink></li>
+            <li class=""><NuxtLink to="/projects" class="hover:text-aquagreen hover:underline pl-4 py-4 text-2xl text-purple block whitespace-nowrap justify-start ">Projects</NuxtLink></li>
+            <li class=""><NuxtLink to="/mattLeeDevResume.pdf" target="_blank" class="hover:text-aquagreen hover:underline text-purple pl-4 py-4 text-2xl block whitespace-nowrap justify-start">Resume</NuxtLink></li>
+            <li class=""><NuxtLink @click.prevent="scrollToSection('contact')" class="hover:text-aquagreen hover:underline text-purple pl-4 py-4 text-2xl block whitespace-nowrap hover:cursor-pointer justify-start">Contact Me</NuxtLink></li>
             <li class="">
             <div class="flex flex-row justify-center mt-10">
           <NuxtLink to="https://github.com/mattrlee35" target="_blank">
@@ -68,17 +67,16 @@
     </header>
 
     <!-- Vertical Navbar -->
-    <div class="fixed left-0 top-1/2 transform -translate-y-1/2 h-auto text-aquagreen flex flex-col justify-center items-center space-y-2 p-4 z-50">
-  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'home','text-purple': currentRoute !== 'projects' && currentRoute !== 'home' && currentRoute !=='contact'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'about', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='about'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'timeline', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact'&& currentRoute !=='timeline'}">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('skills')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'skills', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='skills'}">{{ currentRoute === 'skills' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-black': currentRoute === 'projects', 'text-purple': currentRoute !== 'projects' && currentRoute !=='contact'}">{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'contact', 'text-purple': currentRoute !== 'projects'}">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
+    <div class="fixed left-16 top-1/2 transform -translate-y-1/2 h-auto text-black flex flex-col justify-center items-center space-y-2 py-4 ml-4 z-50">
+  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-lightgray': currentRoute === 'home', 'text-lightgray': currentRoute === 'contact'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'about', 'text-black': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='about'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'timeline', 'text-black': currentRoute !== 'projects' && currentRoute !=='contact'&& currentRoute !=='timeline'}">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-lightgray': currentRoute === 'projects', 'text-black': currentRoute !== 'projects' && currentRoute !=='contact'}">{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink>
+  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'contact', 'text-black': currentRoute !== 'projects'}">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
 </div>
 
 <div id="home" class="snap-start w-screen h-screen relative flex flex-col">
-  <div class="bg-purple w-full h-5/6 flex items-center justify-center text-8xl space-x-20" style="background-image: url(/landingPage3.svg); background-size: cover; background-position: center;">
+  <div class="bg-purple w-full h-5/6 flex items-center justify-center text-8xl space-x-20" style="background-image: url(/landingPage2.svg); background-size: cover; background-position: center;">
     <div class="flex items-center justify-between px-10 w-7/12">
       <div>
         <p class="pb-10 text-black">Matt Lee</p>
@@ -92,19 +90,34 @@
       <avatar />
     </div>
   </div>
-  <div class="bg-lightgray h-1/6"></div>
+  <div class="bg-lightgray h-1/4"></div>
 </div>
-    <div id="about" class="snap-start bg-lightgray w-screen h-screen flex">
-      <p>About Me</p>
-      <p><aboutMe /></p>
+    <div id="about" class="snap-start bg-lightgray w-screen h-screen flex items-center justify-center">
+      <div class="flex w-9/12 h-1/2 mb-4 space-x-24 justify-center">
+        <div>
+          <h1 class="text-7xl mb-6 text-purple">Design</h1>
+          <p class="text-lg text-black">I'm probably not the typical designer positioned behind an Illustrator artboard adjusting pixels, but I design. Immersed in stylesheets tweaking font sizes and contemplating layouts is where you'll find me (~_^). I'm committed to creating fluent user experiences while staying fashionable.</p>  
+        </div>
+        <div>
+          <h1 class="text-7xl mt-60 ml-20 mb-6 text-purple">Engineering</h1>
+          <p class="text-lg ml-20 text-black">I'm probably not the typical designer positioned behind an Illustrator artboard adjusting pixels, but I design. Immersed in stylesheets tweaking font sizes and contemplating layouts is where you'll find me (~_^). I'm committed to creating fluent user experiences while staying fashionable.</p>
+        </div>
+      </div>
     </div>
     <div id="timeline" class="snap-start bg-aquagreen w-screen h-screen flex items-center justify-center">
-      <p><timeline /></p>
+      <div class="flex w-9/12 h-1/2 mb-4 space-x-7 justify-center">
+        <div class ="bg-lightgray w-1/3 shadow-2xl">
+
+        </div>
+        <div  class ="bg-lightgray w-1/3 shadow-2xl">
+        
+        </div>
+        <div  class ="bg-lightgray w-1/3 shadow-2xl">
+        
+        </div>
+      </div>
     </div>
-    <div id="skills" class="snap-start bg-lightgray w-screen h-screen flex items-center justify-center text-8xl">
-      <p>Skills</p>
-    </div>
-    <div id="projects" class="snap-start bg-purple text-silver w-screen h-screen flex items-center justify-center text-8xl">
+    <div id="projects" class="snap-start bg-plum text-silver w-screen h-screen flex items-center justify-center text-8xl">
       <div class="bg-black w-1/2 h-1/2 flex flex-col text-5xl items-center justify-center">
   <p class="text-center mb-10">Here you can find all my projects!</p>
   <p class="text-center text-3xl mb-28">This is work that I have saved through the years of coding.</p>
@@ -161,6 +174,7 @@
           name="message"
           class="border-b border-purple w-full py-2 bg-black text-aquagreen text-sm focus:outline-none focus:border-aquagreen"
           id="message"
+          type="text"
           placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
           @focus="isMessageFocused = true"
           @blur="isMessageFocused = false"
