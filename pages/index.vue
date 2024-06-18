@@ -67,15 +67,15 @@
     </header>
 
     <!-- Vertical Navbar -->
-    <div class="fixed left-16 top-1/2 transform -translate-y-1/2 h-auto text-black flex flex-col justify-center items-center space-y-2 py-4 ml-4 z-50">
-  <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-lightgray': currentRoute === 'home', 'text-lightgray': currentRoute === 'contact'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'about', 'text-black': currentRoute !== 'projects' && currentRoute !=='contact' && currentRoute !=='about'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'timeline', 'text-black': currentRoute !== 'projects' && currentRoute !=='contact'&& currentRoute !=='timeline'}">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-lightgray': currentRoute === 'projects', 'text-black': currentRoute !== 'projects' && currentRoute !=='contact'}">{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink>
-  <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'contact', 'text-black': currentRoute !== 'projects'}">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
-</div>
+    <div class="fixed left-16 top-1/2 transform -translate-y-1/2 h-auto text-lightgray flex flex-col justify-center items-center space-y-2 py-4 ml-4 z-50">
+      <NuxtLink @click.prevent="scrollToSection('home')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-lightgray': currentRoute === 'home'}">{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('about')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'about', 'text-black': currentRoute !== 'about' && currentRoute !== 'projects' && currentRoute !== 'contact'}">{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('timeline')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-purple': currentRoute === 'timeline', 'text-black': currentRoute !== 'timeline' && currentRoute !== 'projects' && currentRoute !== 'contact'}">{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('projects')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-lightgray': currentRoute === 'projects', 'text-black': currentRoute !== 'projects' && currentRoute !== 'contact'}">{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink>
+      <NuxtLink @click.prevent="scrollToSection('contact')" class="nav-link text-xl hover:cursor-pointer" :class="{ 'text-lightgray': currentRoute === 'contact', 'text-black': currentRoute !== 'contact'}">{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink>
+    </div>
 
-<div id="home" class="snap-start w-screen h-screen relative flex flex-col">
+      <div id="home" class="snap-start w-screen h-screen relative flex flex-col">
   <div class="bg-purple w-full h-5/6 flex items-center justify-center text-8xl space-x-20" style="background-image: url(/landingPage2.svg); background-size: cover; background-position: center;">
     <div class="flex items-center justify-between px-10 w-7/12">
       <div>
@@ -90,8 +90,8 @@
       <avatar />
     </div>
   </div>
-  <div class="bg-lightgray h-1/4"></div>
-</div>
+  <div class="bg-black h-1/4"></div>
+    </div>
     <div id="about" class="snap-start bg-lightgray w-screen h-screen flex items-center justify-center">
       <div class="flex w-9/12 h-1/2 mb-4 space-x-24 justify-center">
         <div>
@@ -104,16 +104,40 @@
         </div>
       </div>
     </div>
-    <div id="timeline" class="snap-start bg-aquagreen w-screen h-screen flex items-center justify-center">
+    <div id="timeline" class="snap-start bg-lightgray w-screen h-screen flex items-center justify-center">
       <div class="flex w-9/12 h-1/2 mb-4 space-x-7 justify-center">
-        <div class ="bg-lightgray w-1/3 shadow-2xl">
-
+        <div class ="bg-white w-1/3 shadow-2xl">
+          <div class="flex h-2/3">
+            <img src="/keyRE.svg" alt="">
+          </div>
+          <div class="text-black flex justify-center">
+            <p>Front-End Web Developer</p>
+          </div>
+          <div class="text-black flex justify-center">
+            <p>Key RE Solutions</p>
+          </div>
         </div>
-        <div  class ="bg-lightgray w-1/3 shadow-2xl">
-        
+        <div class ="bg-white w-1/3 shadow-2xl">
+          <div class="flex h-2/3">
+            <img src="/keyRE.svg" alt="">
+          </div>
+          <div class="text-black flex justify-center">
+            <p>Front-End Web Developer</p>
+          </div>
+          <div class="text-black flex justify-center">
+            <p>Key RE Solutions</p>
+          </div>
         </div>
-        <div  class ="bg-lightgray w-1/3 shadow-2xl">
-        
+        <div class ="bg-white w-1/3 shadow-2xl">
+          <div class="flex h-2/3">
+            <img src="/keyRE.svg" alt="">
+          </div>
+          <div class="text-black flex justify-center">
+            <p>Front-End Web Developer</p>
+          </div>
+          <div class="text-black flex justify-center">
+            <p>Key RE Solutions</p>
+          </div>
         </div>
       </div>
     </div>
@@ -223,61 +247,51 @@
 </div>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+<script>
+export default {
+  data() {
+    return {
+      isDropdownOpen: false,
+      currentRoute: 'home'
+    };
+  },
+  mounted() {
+    this.observeSections();
+  },
+  methods: {
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+    },
+    scrollToSection(section) {
+      const element = this.$refs[section];
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+    observeSections() {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5,
+      };
 
-const router = useRouter();
-const currentRoute = ref(router.currentRoute.value.name);
-const isDropdownOpen = ref(false);
+      const callback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.currentRoute = entry.target.id;
+          }
+        });
+      };
 
-const isNameFocused = ref(false);
-const isEmailFocused = ref(false);
-const isMessageFocused = ref(false);
+      const observer = new IntersectionObserver(callback, options);
+      const sections = this.$refs;
 
-const scrollToSection = (sectionId) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+      for (let section in sections) {
+        observer.observe(sections[section]);
+      }
+    }
   }
 };
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-const toggleDropdown = () => {
-  isDropdownOpen.value = !isDropdownOpen.value;
-};
-
-router.afterEach((to) => {
-  currentRoute.value = to.name;
-});
-
-onMounted(() => {
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5, // When 50% of the target is visible
-  };
-
-  const callback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Extract section name from the entry's target id
-        const sectionName = entry.target.id;
-        currentRoute.value = sectionName;
-      }
-    });
-  };
-
-  // Observe each section individually
-  const sections = document.querySelectorAll('.snap-start');
-  sections.forEach((section) => {
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(section);
-  });
-});
 </script>
 
 
