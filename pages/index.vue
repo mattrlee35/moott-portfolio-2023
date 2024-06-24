@@ -32,17 +32,16 @@
 						viewBox="0 0 24 24"
 						stroke="currentColor"
 						:class="{
-							'text-lightgray': currentRoute === 'contact',
+							'text-purple': currentRoute === 'contact',
 							'text-black':
 								currentRoute === 'projects' ||
 								currentRoute === 'home' ||
 								currentRoute === 'about' ||
 								currentRoute === 'timeline',
 							'hover:text-silver':
-								currentRoute === 'home' || currentRoute === 'projects',
-							'hover:text-black':
+								currentRoute === 'home' || currentRoute === 'projects' || currentRoute === 'contact',
+							'hover:text-purple':
 								currentRoute === 'about' || currentRoute === 'timeline',
-							'hover:text-plum': currentRoute === 'contact',
 						}">
 						<path
 							stroke-linecap="round"
@@ -61,7 +60,7 @@
 							<!-- X button to close the menu -->
 							<button
 								@click="toggleDropdown"
-								class="text-purple hover:text-aquagreen p-0 bg-transparent border-none cursor-pointer">
+								class="text-black hover:text-purple p-0 bg-transparent border-none cursor-pointer">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="h-10 w-10"
@@ -79,7 +78,7 @@
 						<li class="">
 							<NuxtLink
 								to="/projects"
-								class="hover:text-aquagreen hover:underline pl-4 py-4 text-2xl text-purple block whitespace-nowrap justify-start"
+								class="hover:text-purple hover:underline pl-4 py-4 text-2xl text-black block whitespace-nowrap justify-start"
 								>Projects</NuxtLink
 							>
 						</li>
@@ -87,14 +86,14 @@
 							<NuxtLink
 								to="/mattLeeDevResume.pdf"
 								target="_blank"
-								class="hover:text-aquagreen hover:underline text-purple pl-4 py-4 text-2xl block whitespace-nowrap justify-start"
+								class="hover:text-purple hover:underline text-black pl-4 py-4 text-2xl block whitespace-nowrap justify-start"
 								>Resume</NuxtLink
 							>
 						</li>
 						<li class="">
 							<NuxtLink
 								@click.prevent="scrollToSection('contact')"
-								class="hover:text-aquagreen hover:underline text-purple pl-4 py-4 text-2xl block whitespace-nowrap hover:cursor-pointer justify-start"
+								class="hover:text-purple hover:underline text-black pl-4 py-4 text-2xl block whitespace-nowrap hover:cursor-pointer justify-start"
 								>Contact Me</NuxtLink
 							>
 						</li>
@@ -105,7 +104,7 @@
 									target="_blank">
 									<button
 										type="button"
-										class="w-full justify-center inline-flex text-center text-purple items-center gap-x-2 px-3.5 py-2.5 text-lg hover:underline hover:text-aquagreen">
+										class="w-full justify-center inline-flex text-center text-black items-center gap-x-2 px-3.5 py-2.5 text-lg hover:underline hover:text-purple">
 										<svg
 											class="h-10 w-10"
 											viewBox="0 0 24 24"
@@ -125,7 +124,7 @@
 									target="_blank">
 									<button
 										type="button"
-										class="w-full justify-center inline-flex text-center items-center text-purple gap-x-2 px-3.5 py-2.5 text-lg hover:underline hover:text-aquagreen">
+										class="w-full justify-center inline-flex text-center items-center text-black gap-x-2 px-3.5 py-2.5 text-lg hover:underline hover:text-purple">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											class="h-10 w-10"
@@ -145,13 +144,12 @@
 
 		<!-- Vertical Navbar -->
 		<div
-			class="fixed left-16 top-1/2 transform -translate-y-1/2 h-auto flex flex-col justify-center items-center space-y-2 py-4 ml-4 z-50">
+			class="fixed left-16 top-1/2 transform -translate-y-1/2 h-auto flex flex-col text-black justify-center items-center space-y-2 py-4 ml-4 z-50">
 			<NuxtLink
 				@click.prevent="scrollToSection('home')"
 				class="nav-link text-xl hover:cursor-pointer"
 				:class="{
-					'text-lightgray': currentRoute === 'home',
-					'text-black': currentRoute !== 'home',
+					'text-lightgray': currentRoute === 'home' || currentRoute === 'contact'
 				}"
 				>{{ currentRoute === 'home' ? '◼' : '◆' }}</NuxtLink
 			>
@@ -160,7 +158,7 @@
 				class="nav-link text-xl hover:cursor-pointer"
 				:class="{
 					'text-purple': currentRoute === 'about',
-					'text-black': currentRoute !== 'about',
+					'text-lightgray': currentRoute === 'contact'
 				}"
 				>{{ currentRoute === 'about' ? '◼' : '◆' }}</NuxtLink
 			>
@@ -169,7 +167,7 @@
 				class="nav-link text-xl hover:cursor-pointer"
 				:class="{
 					'text-purple': currentRoute === 'timeline',
-					'text-black': currentRoute !== 'timeline',
+					'text-lightgray': currentRoute === 'contact'
 				}"
 				>{{ currentRoute === 'timeline' ? '◼' : '◆' }}</NuxtLink
 			>
@@ -177,8 +175,7 @@
 				@click.prevent="scrollToSection('projects')"
 				class="nav-link text-xl hover:cursor-pointer"
 				:class="{
-					'text-lightgray': currentRoute === 'projects',
-					'text-black': currentRoute !== 'projects',
+					'text-lightgray': currentRoute === 'projects' || currentRoute === 'contact'
 				}"
 				>{{ currentRoute === 'projects' ? '◼' : '◆' }}</NuxtLink
 			>
@@ -186,8 +183,7 @@
 				@click.prevent="scrollToSection('contact')"
 				class="nav-link text-xl hover:cursor-pointer"
 				:class="{
-					'text-lightgray': currentRoute === 'contact',
-					'text-black': currentRoute !== 'contact',
+					'text-purple': currentRoute === 'contact'
 				}"
 				>{{ currentRoute === 'contact' ? '◼' : '◆' }}</NuxtLink
 			>
@@ -314,7 +310,7 @@
 		<div
 			id="contact"
 			class="snap-start bg-black w-screen h-screen flex flex-col justify-center items-center text-2xl">
-			<p class="text-5xl font-semibold mt-10 pb-5 text-aquagreen text-center">
+			<p class="text-5xl font-semibold mt-10 pb-5 text-silver text-center">
 				Send me a message!
 			</p>
 			<p class="pb-5 text-aquagreen text-center">
@@ -334,14 +330,14 @@
 									'text-aquagreen': isNameFocused,
 									'text-plum': !isNameFocused,
 								}"
-								class="bg-black mb-2 text-center"
+								class="bg-black mb-1 text-center"
 								for="name"
 								>Your Name</label
 							>
 							<input
 								v-model="name"
 								name="name"
-								class="border-b w-full bg-black border-purple py-2 text-aquagreen text-sm focus:outline-none focus:border-aquagreen"
+								class="border-b w-full bg-black border-purple py-2 text-silver text-sm focus:outline-none focus:border-aquagreen"
 								id="name"
 								type="text"
 								placeholder="Enter your name"
@@ -355,14 +351,14 @@
 									'text-aquagreen': isEmailFocused,
 									'text-plum': !isEmailFocused,
 								}"
-								class="bg-black mb-2 text-center"
+								class="bg-black mb-1 text-center"
 								for="email"
 								>Email Address</label
 							>
 							<input
 								v-model="email"
 								name="_replyto"
-								class="border-b border-purple w-full py-2 bg-black text-aquagreen text-sm focus:outline-none focus:border-aquagreen"
+								class="border-b border-purple w-full py-2 bg-black text-silver text-sm focus:outline-none focus:border-aquagreen"
 								id="email"
 								type="email"
 								placeholder="Enter your email address"
@@ -379,14 +375,14 @@
 									'text-aquagreen': isMessageFocused,
 									'text-puple': !isMessageFocused,
 								}"
-								class="text-purple text-base mb-2 block text-center"
+								class="text-purple mb-1 block text-center"
 								for="message"
 								>Your Message</label
 							>
 							<textarea
 								v-model="message"
 								name="message"
-								class="border-b border-purple w-full py-2 bg-black text-aquagreen text-sm focus:outline-none focus:border-aquagreen"
+								class="border-b border-purple w-full py-2 bg-black text-silver text-sm focus:outline-none focus:border-aquagreen"
 								id="message"
 								type="text"
 								placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
