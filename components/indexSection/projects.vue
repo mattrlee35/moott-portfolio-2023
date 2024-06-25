@@ -6,9 +6,20 @@
             This is work that I have saved through the years of coding.
         </p>
         <NuxtLink
-            to="/projects"
-            class="mt-4 border border-aquagreen hover:bg-aquagreen hover:text-black hover:border-aquagreen text-lg text-aquagreen font-bold py-2 px-4">
+            to="/projects">
+            <button class="mt-4 border border-aquagreen bg-transparent hover:bg-aquagreen hover:text-black text-aquagreen font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline"
+					type="button">
             See my Projects!
+            </button>
         </NuxtLink>
     </div>
 </template>
+
+<style scoped>
+button {
+		text-align: left; /* Center button text */
+		display: inline-block;
+		cursor: pointer;
+		transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+	}
+</style>
