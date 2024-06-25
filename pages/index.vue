@@ -225,87 +225,17 @@
 		<div
 			id="about"
 			class="snap-start bg-lightgray w-screen h-screen flex items-center justify-center">
-			<div class="flex w-9/12 h-1/2 mb-4 space-x-24 justify-center">
-				<div>
-					<h1 class="text-7xl mb-6 text-purple">Design</h1>
-					<p class="text-lg text-black">
-						I'm probably not the typical designer positioned behind an Illustrator
-						artboard adjusting pixels, but I design. Immersed in stylesheets tweaking
-						font sizes and contemplating layouts is where you'll find me (~_^). I'm
-						committed to creating fluent user experiences while staying fashionable.
-					</p>
-				</div>
-				<div>
-					<h1 class="text-7xl mt-60 ml-20 mb-6 text-purple">Engineering</h1>
-					<p class="text-lg ml-20 text-black">
-						I'm probably not the typical designer positioned behind an Illustrator
-						artboard adjusting pixels, but I design. Immersed in stylesheets tweaking
-						font sizes and contemplating layouts is where you'll find me (~_^). I'm
-						committed to creating fluent user experiences while staying fashionable.
-					</p>
-				</div>
-			</div>
+			<IndexSectionAbout />
 		</div>
 		<div
 			id="timeline"
 			class="snap-start bg-lightgray w-screen h-screen flex items-center justify-center">
-			<div class="flex w-9/12 h-1/2 mb-4 space-x-7 justify-center">
-				<div class="bg-white w-1/3 shadow-2xl">
-					<div class="flex h-2/3">
-						<img
-							src="/keyRE.svg"
-							alt="" />
-					</div>
-					<div class="text-black flex justify-center">
-						<p>Front-End Web Developer</p>
-					</div>
-					<div class="text-black flex justify-center">
-						<p>Key RE Solutions</p>
-					</div>
-				</div>
-				<div class="bg-white w-1/3 shadow-2xl">
-					<div class="flex h-2/3">
-						<img
-							src="/keyRE.svg"
-							alt="" />
-					</div>
-					<div class="text-black flex justify-center">
-						<p>Front-End Web Developer</p>
-					</div>
-					<div class="text-black flex justify-center">
-						<p>Key RE Solutions</p>
-					</div>
-				</div>
-				<div class="bg-white w-1/3 shadow-2xl">
-					<div class="flex h-2/3">
-						<img
-							src="/keyRE.svg"
-							alt="" />
-					</div>
-					<div class="text-black flex justify-center">
-						<p>Front-End Web Developer</p>
-					</div>
-					<div class="text-black flex justify-center">
-						<p>Key RE Solutions</p>
-					</div>
-				</div>
-			</div>
+			<IndexSectionTimeline />
 		</div>
 		<div
 			id="projects"
 			class="snap-start bg-plum text-silver w-screen h-screen flex items-center justify-center text-8xl">
-			<div
-				class="bg-black w-1/2 h-1/2 flex flex-col text-5xl items-center justify-center">
-				<p class="text-center mb-10">Here you can find all my projects!</p>
-				<p class="text-center text-3xl mb-28">
-					This is work that I have saved through the years of coding.
-				</p>
-				<NuxtLink
-					to="/projects"
-					class="mt-4 border border-aquagreen hover:bg-aquagreen hover:text-black hover:border-aquagreen text-lg text-aquagreen font-bold py-2 px-4">
-					See my Projects!
-				</NuxtLink>
-			</div>
+			<IndexSectionProjects />
 		</div>
 		<div
 			id="contact"
