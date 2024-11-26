@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+const pluginTailwind = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
@@ -49,7 +49,8 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
+    [require('tailwindcss-primeui')],
+    pluginTailwind(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
           'text-shadow': (value) => ({

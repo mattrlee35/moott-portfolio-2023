@@ -8,4 +8,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  modules: [
+    '@primevue/nuxt-module',
+  ],
+  primevue: {
+    /* Configuration */
+  }
 })
